@@ -1,0 +1,13 @@
+#!/bin/sh
+
+files=`git diff --name-only HEAD src | grep -v '\-meta.xml$'`
+
+if [ "$#" -ne 1 ]; then
+	echo "Deploying to default org:"
+	echo $files
+	sf compile $files
+else
+	echo "Deploying to $1:"
+	echo $files
+	sf --org=$1 compile $files
+fi

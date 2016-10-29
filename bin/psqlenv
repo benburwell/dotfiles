@@ -1,0 +1,4 @@
+#!/bin/sh
+
+psql `grep "^$1=" -m 1 < .env | cut -d'=' -f2 | sed 's/"//g'`
+

@@ -1,0 +1,6 @@
+#compdef sf
+
+
+_arguments "1: :(aura bulkQuery cancelDeploy chatter compile compileAndTest completions coverage createPackageXml createTraceFlag describe destroy execute list listFolder log proposeTests query retrieve metadata run show metadata status test toolingDelete toolingDeleteQuery toolingQuery toolingTest whoami info wipeCache)"
+_files ./src/
+
