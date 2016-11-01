@@ -42,6 +42,7 @@ Plugin 'neowit/vim-force.com'
 Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 
 " colorschemes i like
 "Plugin 'sickill/vim-monokai'

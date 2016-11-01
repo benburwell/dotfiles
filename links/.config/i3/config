@@ -1,3 +1,5 @@
+# vim: ft=i3:
+
 set $mod Mod1
 font pango:Source Code Pro for Powerline 11
 
