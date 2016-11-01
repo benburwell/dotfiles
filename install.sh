@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 cd $HOME/.dotfiles/links
 # first create necessary directories
