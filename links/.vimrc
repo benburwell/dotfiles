@@ -10,7 +10,7 @@ set smartcase
 set nowrap
 set cursorline
 
-if has("nvim")
+if has("termguicolors")
   set termguicolors
 endif
 
