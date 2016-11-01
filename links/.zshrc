@@ -17,6 +17,10 @@ source $ZSH/window.zsh
 source $ZSH/aliases.zsh
 source $ZSH/config.zsh
 
+for f in $(find ~/.dotfiles/functions/ -type f); do
+	source $f
+done
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
