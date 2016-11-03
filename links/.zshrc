@@ -21,6 +21,8 @@ for f in $(find ~/.dotfiles/functions/ -type f); do
 	source $f
 done
 
+fpath=(~/.dotfiles/bin ~/.dotfiles/functions $fpath)
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit

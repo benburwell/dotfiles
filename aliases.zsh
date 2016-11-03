@@ -32,6 +32,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
 alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
 alias gb='git branch'
 alias gs='git status' # upgrade your git if -sb breaks for you. it's fun.
 alias gr='git remote'
