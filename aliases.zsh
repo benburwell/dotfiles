@@ -60,3 +60,12 @@ alias stt="sf toolingTest"
 
 # http
 alias http="python -m SimpleHTTPServer 8000"
+
+# heroku
+alias h="heroku"
+alias hpg="heroku pg:psql"
+alias hps="heroku ps"
+alias hpss="heroku ps:scale"
+alias hlt="heroku logs --tail"
+alias hu="git push heroku master"
+
