@@ -1,4 +1,3 @@
-export PROJECTS=~/Code
 export GOPATH=$PROJECTS
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
