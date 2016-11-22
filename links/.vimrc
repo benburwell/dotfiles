@@ -9,6 +9,7 @@ set ignorecase
 set smartcase
 set nowrap
 set cursorline
+set wildignorecase
 
 if has("termguicolors")
   set termguicolors
