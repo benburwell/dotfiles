@@ -5,6 +5,9 @@ if [ "$#" -ne 1 ]; then
 	exit 1
 fi
 
-id=`sf --org=$1 toolingQuery "select id, tracedentity.name from traceflag" | jq -M '.records | map(select(.TracedEntity.Name == "Trifecta Developers")) | .[].Id' | cut -d'"' -f2`
-sf --org=$1 toolingDelete $id | jq '.[]'
+ids=`sf --org=$1 toolingQuery "select id, tracedentity.name from traceflag" | jq -M '.records[].Id' | cut -d'"' -f2`
+for id in $ids; do
+	echo "Deleting trace flag $id"
+	sf --org=$1 toolingDelete $id | jq -C '.[]'
+done
 
