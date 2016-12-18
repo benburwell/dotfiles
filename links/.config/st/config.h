@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char font[] = "Source Code Pro for Powerline:pixelsize=18:style=medium";
 static int borderpx = 2;
 
 /*
@@ -84,31 +84,23 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#0a0f14",
+	"#c33027",
+	"#26a98b",
+	"#edb54b",
+	"#195465",
+	"#4e5165",
+	"#33859d",
+	"#98d1ce",
+	"#10151b",
+	"#d26939",
+	"#081f2d",
+	"#245361",
+	"#093748",
+	"#888ba5",
+	"#599caa",
+	"#d3ebe9",
+	[255] = 0
 };
 
 
@@ -118,8 +110,8 @@ static const char *colorname[] = {
  */
 static unsigned int defaultfg = 7;
 static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 7;
 
 /*
  * Default shape of cursor
