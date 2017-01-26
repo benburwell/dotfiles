@@ -25,6 +25,7 @@ fi
 # git
 alias g="git"
 alias gl='git pull'
+alias glr='git pull --rebase'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gp='git push'
 alias gd='git diff'
@@ -34,7 +35,7 @@ alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcp='git cherry-pick'
 alias gb='git branch'
-alias gs='git status' # upgrade your git if -sb breaks for you. it's fun.
+alias gs='git status'
 alias gr='git remote'
 alias gm='git merge'
 alias gsl='git stash list'

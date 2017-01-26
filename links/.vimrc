@@ -68,6 +68,7 @@ au BufEnter *.evt set syntax=xml noexpandtab
 au BufEnter *.app set syntax=xml noexpandtab
 au BufEnter .sfconfig set syntax=json
 au BufEnter *.coffee set ft=coffee
+au BufEnter ~/.sf/config set ft=json
 
 " gitgutter settings
 let g:gitgutter_realtime = 0
