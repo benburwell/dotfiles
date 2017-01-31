@@ -71,3 +71,5 @@ alias hpss="heroku ps:scale"
 alias hlt="heroku logs --tail"
 alias hu="git push heroku master"
 
+# party parrot
+alias parrot="terminal-parrot"
