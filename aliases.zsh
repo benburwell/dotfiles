@@ -50,7 +50,7 @@ alias gg="go get"
 alias of="go fmt"
 
 # sf
-alias sc="sf compile"
+alias sfc="sf compile"
 alias st="sf test"
 alias sct="sf compileAndTest"
 alias sr="sf retrieve"
