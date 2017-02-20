@@ -44,6 +44,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'chrisbra/csv.vim'
 
 " colorschemes i like
 "Plugin 'sickill/vim-monokai'
@@ -69,6 +70,7 @@ au BufEnter *.app set syntax=xml noexpandtab
 au BufEnter .sfconfig set syntax=json
 au BufEnter *.coffee set ft=coffee
 au BufEnter ~/.sf/config set ft=json
+au BufEnter *.csv set ft=csv
 
 " gitgutter settings
 let g:gitgutter_realtime = 0
