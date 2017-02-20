@@ -1,0 +1,5 @@
+# vim: :set ft=zsh:
+
+function cabdoc() {
+	git log --no-merges --author=ben.burwell@trifecta.com master..$1 --pretty=format:'%h %w(80,0,8)%B' > cab.txt
+}
