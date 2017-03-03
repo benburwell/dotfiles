@@ -28,10 +28,6 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# splitting
-bindsym $mod+- split h
-bindsym $mod+| split v
-
 # switch workspaces
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
