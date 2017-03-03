@@ -25,7 +25,7 @@
 # accept all cookies if desired.  The default is "FALSE" which will
 # prompt for each cookie.  Set accept_all_cookies to "TRUE" to accept
 # all cookies.
-accept_all_cookies=off
+accept_all_cookies=TRUE
 
 # anonftp_password allows the user to tell Lynx to use the personal
 # email address as the password for anonymous ftp.  If no value is given,
@@ -36,7 +36,7 @@ anonftp_password=
 # bookmark_file specifies the name and location of the default bookmark
 # file into which the user can paste links for easy access at a later
 # date.
-bookmark_file=lynx_bookmarks.html
+bookmark_file=~/.lynx_bookmarks.html
 
 # If case_sensitive_searching is "on" then when the user invokes a search
 # using the 's' or '/' keys, the search performed will be case sensitive
@@ -323,12 +323,12 @@ sub_bookmarks=OFF
 # commands.  Set user_mode to "INTERMEDIATE" to turn off the extra info.
 # Use "ADVANCED" to see the URL of the currently selected link at the
 # bottom of the screen.
-user_mode=NOVICE
+user_mode=INTERMEDIATE
 
 # If verbose_images is "on", lynx will print the name of the image
 # source file in place of [INLINE], [LINK] or [IMAGE]
 # See also VERBOSE_IMAGES in lynx.cfg
-verbose_images=on
+verbose_images=
 
 # If vi_keys is set to "on", then the normal VI movement keys:
 #   j = down    k = up
