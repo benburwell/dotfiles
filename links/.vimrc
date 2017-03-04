@@ -75,6 +75,7 @@ au BufEnter *.coffee set ft=coffee
 au BufEnter ~/.sf/config set ft=json
 au BufEnter *.csv set ft=csv
 au BufEnter *.jq set ft=jq
+au FileType markdown set spell
 
 " gitgutter settings
 let g:gitgutter_realtime = 0
