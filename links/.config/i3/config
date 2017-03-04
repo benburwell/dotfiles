@@ -40,6 +40,28 @@ bindsym $mod+Shift+2 move workspace 2
 bindsym $mod+Shift+3 move workspace 3
 bindsym $mod+Shift+4 move workspace 4
 
+# split vertical/horizontal
+# | = 51
+# - = 20
+bindcode $mod+51 split h
+bindcode $mod+20 split v
+
+# resize window
+bindsym $mod+Shift+a mode "resize"
+mode "resize" {
+    # let the upper left be the "origin", so movements toward upper left
+    # are shrinking movements, and movements away from upper left are growing
+    bindsym h resize shrink width 5 px or 5 ppt
+    bindsym l resize grow width 5 px or 5 ppt
+    bindsym k resize shrink height 5 px or 5 ppt
+    bindsym j resize grow height 5 px or 5 ppt
+
+    # enter and escape to return to normal mode
+    bindcode 36 mode "default"
+    bindcode 9 mode "default"
+}
+
+# major actions
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
