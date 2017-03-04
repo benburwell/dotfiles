@@ -40,11 +40,15 @@ bindsym $mod+Shift+2 move workspace 2
 bindsym $mod+Shift+3 move workspace 3
 bindsym $mod+Shift+4 move workspace 4
 
-# split vertical/horizontal
+# use a specific split vertical/horizontal
 # | = 51
 # - = 20
 bindcode $mod+51 split h
 bindcode $mod+20 split v
+
+# change current layout
+bindsym $mod+s layout stacking
+bindsym $mod+p layout toggle split
 
 # resize window
 bindsym $mod+Shift+a mode "resize"
