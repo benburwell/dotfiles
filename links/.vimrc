@@ -101,6 +101,8 @@ inoremap {<CR> {<CR>}<Esc>ko
 " double-Esc clears last search
 nnoremap <silent> <Esc><Esc> <Esc>:let @/=""<CR><Esc>
 
+nnoremap ; :
+
 " make n / N center the find on the screen
 nmap n nzz
 nmap N Nzz
