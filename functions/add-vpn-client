@@ -1,0 +1,6 @@
+# vim: :set ft=sh:
+
+function add-vpn-client() {
+	echo "cd ./openvpn-ca && source ./vars && ./build-key-quiet \"$1\" && cd && ./client-configs/make_config.sh \"$1\"" | ssh vpn.burwell.io
+	scp vpn.burwell.io:"~/client-configs/files/$1.ovpn" "$1.ovpn"
+}

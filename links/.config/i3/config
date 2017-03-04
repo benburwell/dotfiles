@@ -68,6 +68,7 @@ mode "resize" {
 # major actions
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
+bindsym $mod+Shift+d exec i3lock -n -c 000000
 
 bar {
 	status_command i3status -c ~/.i3status.conf
