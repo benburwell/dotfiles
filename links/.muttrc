@@ -1,0 +1,24 @@
+# sorting
+set sort = "threads"
+set sort_aux = "reverse-last-date-received"
+
+# composing
+set include
+set mail_check = 60
+
+# formatting
+set date_format = '%Y-%m-%d %H:%M'
+set index_format = '%S %Z %D %-15.15L %s'
+set editor = "nvim +':set textwidth=80' +':set wrap' +':set ft=markdown'"
+
+# keys
+bind index gg first-entry
+bind index G last-entry
+
+# macros
+macro index s '<sync-mailbox>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/bburwell1@gmail.com<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/ben@benburwell.com<enter><change-folder>!<enter>'
+
+# default account
+source ~/.mutt/bburwell1@gmail.com
