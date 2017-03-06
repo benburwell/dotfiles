@@ -24,7 +24,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set listchars="tab:>~,nbsp:_,trail:."
+set listchars=tab:›\ ,nbsp:_,trail:·,eol:¬
 set list
 
 set wildmode=longest,list,full
