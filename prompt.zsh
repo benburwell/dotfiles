@@ -60,8 +60,8 @@ prompt_git() {
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' stagedstr '[staged]'
-    zstyle ':vcs_info:git:*' unstagedstr '[unstaged]'
+    zstyle ':vcs_info:*' stagedstr '[s]'
+    zstyle ':vcs_info:git:*' unstagedstr '[u]'
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info
