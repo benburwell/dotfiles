@@ -6,6 +6,7 @@ setopt APPEND_HISTORY # adds history
 setopt AUTO_CD
 setopt COMPLETE_IN_WORD
 setopt CORRECT
+setopt EXTENDED_GLOB
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
