@@ -1,5 +1,4 @@
 set nocompatible
-filetype off
 syntax enable
 set number
 
@@ -30,8 +29,9 @@ set list
 set wildmode=longest,list,full
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+filetype off
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
@@ -40,14 +40,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kchmck/vim-coffee-script'
-"Plugin 'benburwell/vim-syntax-apex'
-Plugin 'neowit/vim-force.com'
+"Plugin 'neowit/vim-force.com'
 Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vito-c/jq.vim'
+Plugin 'ssh://git@gitserver.trifecta.com/salesforce-vim.git'
 
 " colorschemes i like
 "Plugin 'sickill/vim-monokai'
@@ -56,25 +55,19 @@ Plugin 'vito-c/jq.vim'
 "Plugin 'benburwell/vim-colorscheme-benji'
 "Plugin 'roosta/vim-srcery'
 Plugin 'whatyouhide/vim-gotham'
-
 call vundle#end()
 filetype plugin indent on
 
 colorscheme gotham
 
-au BufEnter *.cls set syntax=apex noexpandtab
-au BufEnter *.trigger set syntax=apex noexpandtab
-au BufEnter *.page set syntax=xml noexpandtab
-au BufEnter *.component set syntax=xml noexpandtab
-au BufEnter *.email set syntax=xml noexpandtab
-au BufEnter *.cmp set syntax=xml noexpandtab
-au BufEnter *.evt set syntax=xml noexpandtab
-au BufEnter *.app set syntax=xml noexpandtab
-au BufEnter .sfconfig set syntax=json
-au BufEnter *.coffee set ft=coffee
+" config files that get specific types/syntax
 au BufEnter ~/.sf/config set ft=json
-au BufEnter *.csv set ft=csv
-au BufEnter *.jq set ft=jq
+
+" various syntaxes from plugins
+"au BufEnter *.coffee set ft=coffee
+"au BufEnter *.jq set ft=jq
+
+" spellcheck markdown files
 au FileType markdown set spell
 
 " gitgutter settings
@@ -101,6 +94,7 @@ inoremap {<CR> {<CR>}<Esc>ko
 " double-Esc clears last search
 nnoremap <silent> <Esc><Esc> <Esc>:let @/=""<CR><Esc>
 
+" make it easier to type ex commands
 noremap ; :
 
 " make n / N center the find on the screen
@@ -110,5 +104,3 @@ nmap N Nzz
 " quickly jump center with <space>
 nmap <Space> zz
 
-" open NERDtree
-nmap <leader>n :NERDTree<cr>
