@@ -69,6 +69,7 @@ au BufEnter ~/.sf/config set ft=json
 
 " spellcheck markdown files
 au FileType markdown set spell
+au FileType gitcommit set spell
 
 " gitgutter settings
 let g:gitgutter_realtime = 0
