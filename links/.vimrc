@@ -22,7 +22,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set noexpandtab
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
 
