@@ -73,3 +73,4 @@ alias hu="git push heroku master"
 
 # party parrot
 alias parrot="terminal-parrot"
+alias celebrate="terminal-parrot -delay 50 -loops 3"
