@@ -26,6 +26,9 @@ set noexpandtab
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
 
+set path+=**
+set wildmenu
+
 set wildmode=longest,list,full
 
 set rtp+=~/.vim/bundle/Vundle.vim
