@@ -34,13 +34,11 @@ filetype off
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rking/ag.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kchmck/vim-coffee-script'
-"Plugin 'neowit/vim-force.com'
 Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
