@@ -69,7 +69,7 @@ au BufEnter ~/.sf/config set ft=json
 "au BufEnter *.jq set ft=jq
 
 " spellcheck markdown files
-au FileType markdown set spell
+au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
 
 " gitgutter settings
