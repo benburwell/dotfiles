@@ -112,10 +112,6 @@ prompt_time() {
 build_prompt() {
   RETVAL=$?
   prompt_status
-	prompt_time
-  prompt_rvm
-  prompt_node
-	#prompt_host
   prompt_dir
   prompt_git
   prompt_end
