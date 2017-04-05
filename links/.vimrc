@@ -106,6 +106,9 @@ nmap N Nzz
 " quickly jump center with <space>
 nmap <Space> zz
 
-" quickly regenerate Apex ctags
-command ApexTags !ctags --language-force=java ./src/classes/*.cls
+" always do a global tag search
+nmap <C-]> g<C-]>
+
+" quickly regenerate ctags
+command Ctags !ctags .
 
