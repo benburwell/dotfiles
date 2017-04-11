@@ -1,19 +1,17 @@
 set nocompatible
+
+" UI settings
 syntax enable
-set number
-
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-set nowrap
+set relativenumber
 set cursorline
-set wildignorecase
-
+set nowrap
 if has("termguicolors")
   set termguicolors
 endif
+set listchars=tab:›\ ,nbsp:_,trail:·
+set list
 
+" General file settings
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
@@ -23,16 +21,21 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
-set listchars=tab:›\ ,nbsp:_,trail:·
-set list
 
+" Completion and such
+set dictionary=/usr/share/dict/words
+set complete+=kspell
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wildignorecase
 set path+=**
 set wildmenu
-
 set wildmode=longest,list,full
 
 set rtp+=~/.vim/bundle/Vundle.vim
-
 filetype off
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
