@@ -1,0 +1,4 @@
+#compdef sv
+
+_files .
+
