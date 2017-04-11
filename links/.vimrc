@@ -3,6 +3,7 @@ set nocompatible
 " UI settings
 syntax enable
 set relativenumber
+set number
 set cursorline
 set nowrap
 if has("termguicolors")
