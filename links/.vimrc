@@ -36,25 +36,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vito-c/jq.vim'
 Plugin 'ssh://git@gitserver.trifecta.com/salesforce-vim.git'
-
-" colorschemes i like
-"Plugin 'sickill/vim-monokai'
-"Plugin 'vim-scripts/lilypink'
-"Plugin 'mtglsk/mushroom'
-"Plugin 'benburwell/vim-colorscheme-benji'
-"Plugin 'roosta/vim-srcery'
 Plugin 'whatyouhide/vim-gotham'
 call vundle#end()
 filetype plugin indent on
