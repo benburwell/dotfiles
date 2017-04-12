@@ -23,10 +23,6 @@ set shiftwidth=4
 set softtabstop=4
 set noexpandtab
 
-" Completion and such
-set dictionary=/usr/share/dict/words
-set complete+=kspell
-
 set incsearch
 set hlsearch
 set ignorecase
@@ -73,6 +69,9 @@ let g:gitgutter_max_signs = 3000
 
 " fugitive settings
 set diffopt+=vertical
+
+" auto complete popup settings
+let g:acp_completeOption = '.,w,b,u,t,kspell'
 
 " when the auto competion popup is visible, remap so that the
 " tab key executes the competion
