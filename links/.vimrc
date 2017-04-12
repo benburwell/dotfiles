@@ -71,12 +71,6 @@ let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_max_signs = 3000
 
-" Ctrl-P settings
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag --ignore ".git/" %s -l --nocolor --hidden -g ""'
-
 " fugitive settings
 set diffopt+=vertical
 
