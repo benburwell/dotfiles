@@ -1,5 +1,8 @@
 set nocompatible
 
+" get the current os for later use
+let os = substitute(system('uname'), "\n", "", "")
+
 " UI settings
 syntax enable
 set relativenumber
@@ -127,7 +130,11 @@ nmap <Space> zz
 nmap <C-]> g<C-]>
 
 " quickly regenerate ctags
-command Ctags !ctags .
+if os == "FreeBSD"
+	command Ctags !exctags .
+else
+	command Ctags !ctags .
+endif
 
 nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
 nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
