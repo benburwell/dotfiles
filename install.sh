@@ -31,6 +31,7 @@ vim +PluginInstall +qall
 # setup nvim
 mkdir -p $HOME/.config
 if [ ! -d $HOME/.config/nvim ]; then
+	mkdir -p $HOME/.config/nvim
 	echo "===> Linking .vim for Neovim"
 	ln -s $HOME/.vim $HOME/.config/nvim
 else
