@@ -7,7 +7,7 @@ font pango:Source Code Pro for Powerline 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec roxterm
+bindsym $mod+Return exec ~/.dotfiles/bin/term
 bindsym $mod+g exec chrome
 
 # kill focused window
