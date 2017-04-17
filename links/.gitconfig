@@ -1,7 +1,7 @@
 [user]
         name = Ben Burwell
-        email = ben.burwell@trifecta.com
-        signingkey = ben.burwell@trifecta.com
+        email = ben@benburwell.com
+        signingkey = ben@benburwell.com
 [credential]
         helper = osxkeychain
 [color]
