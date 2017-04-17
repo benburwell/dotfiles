@@ -8,7 +8,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec ~/.dotfiles/bin/term
-bindsym $mod+g exec chrome
+bindsym $mod+g exec ~/.dotfiles/bin/launch-chrome
 
 # kill focused window
 bindsym $mod+Shift+q kill
