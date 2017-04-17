@@ -68,6 +68,9 @@ mode "resize" {
 # special keys
 bindsym XF86MonBrightnessUp exec ~/.dotfiles/bin/brightness.sh +10
 bindsym XF86MonBrightnessDown exec ~/.dotfiles/bin/brightness.sh -10
+bindsym XF86AudioRaiseVolume exec amixer -c0 set Master 2db+
+bindsym XF86AudioLowerVolume exec amixer -c0 set Master 2db-
+bindsym XF86AudioMute exec amixer -c0 set Master toggle
 
 # major actions
 bindsym $mod+Shift+r restart
