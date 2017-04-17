@@ -65,6 +65,10 @@ mode "resize" {
     bindcode 9 mode "default"
 }
 
+# special keys
+bindsym XF86MonBrightnessUp exec ~/.dotfiles/bin/brightness.sh +10
+bindsym XF86MonBrightnessDown exec ~/.dotfiles/bin/brightness.sh -10
+
 # major actions
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
