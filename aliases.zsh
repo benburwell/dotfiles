@@ -60,9 +60,6 @@ alias sap="sf aura push"
 alias sal="sf aura pull"
 alias stt="sf toolingTest"
 
-# http
-alias http="python -m SimpleHTTPServer 8000"
-
 # heroku
 alias h="heroku"
 alias hpg="heroku pg:psql"
