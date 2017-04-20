@@ -71,3 +71,7 @@ alias hu="git push heroku master"
 # party parrot
 alias parrot="terminal-parrot"
 alias celebrate="terminal-parrot -delay 50 -loops 3"
+
+# docker-compose
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
