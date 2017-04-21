@@ -46,6 +46,7 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'vito-c/jq.vim'
 Plugin 'ssh://git@gitserver.trifecta.com/salesforce-vim.git'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 filetype plugin indent on
 
@@ -72,6 +73,34 @@ set diffopt+=vertical
 
 " auto complete popup settings
 let g:acp_completeOption = '.,w,b,u,t,kspell'
+
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
 
 " when the auto competion popup is visible, remap so that the
 " tab key executes the competion
