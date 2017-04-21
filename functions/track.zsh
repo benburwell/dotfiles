@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 function track() {
 	if [[ $# -lt 2 ]]; then
 		echo "Usage: track <start|stop|stats> <task> [range]" && return 1

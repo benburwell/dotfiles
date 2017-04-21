@@ -1,5 +1,3 @@
-# vim: :set ft=sh:
-
 green=`tput setaf 2`
 reset=`tput sgr0`
 

@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 function sv() {
 	if [[ $# -lt 1 ]]; then
 		echo "Usage: sv <file> [ <org name ]" && return 1

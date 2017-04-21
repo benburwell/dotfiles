@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 function cr() {
 	if [[ $# -lt 1 ]]; then
 		echo "Usage: cr <release branch>" && return 1

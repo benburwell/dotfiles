@@ -1,5 +1,3 @@
-# vim: :set ft=sh:
-
 function ghclone() {
 	if [[ $# -lt 1 ]]; then
 		echo "Usage: ghclone <username/repo>"

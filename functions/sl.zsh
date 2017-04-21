@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 function sl() {
 	if [[ $# -lt 1 ]]; then
 		echo "Usage: sl <log id> [ <org name ]" && return 1
