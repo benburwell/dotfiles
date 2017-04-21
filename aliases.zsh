@@ -73,5 +73,13 @@ alias parrot="terminal-parrot"
 alias celebrate="terminal-parrot -delay 50 -loops 3"
 
 # docker-compose
+alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
+alias dcl="docker-compose pull"
+
+# docker
+alias d="docker"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias dim="docker images"
