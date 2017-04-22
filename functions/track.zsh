@@ -1,19 +1,26 @@
+local function datediff() {
+	local d0=$(date -d"$1" +%s)
+	local d1=$(date -d"$2" +%s)
+	echo "$(($d1 - $d0))"
+}
+
 function track() {
 	if [[ $# -lt 2 ]]; then
-		echo "Usage: track <start|stop|stats> <task> [range]" && return 1
+		echo "Usage: track <start|stop|hours> <task>" && return 1
 	fi
 
-	cmd=$1
-	task=$2
+	local cmd=$1
+	local task=$2
+	local trackdir
 
 	if [[ $TRACK_ROOT ]]; then
 		trackdir=$TRACK_ROOT
 	else
 		trackdir=~/.track
 	fi
-	logfile="$trackdir/log"
-	taskdir="$trackdir/task/$task"
-	startfile="$taskdir/started"
+	local logfile="$trackdir/log"
+	local taskdir="$trackdir/task/$task"
+	local startfile="$taskdir/started"
 
 	mkdir -p "$taskdir"
 
@@ -31,10 +38,23 @@ function track() {
 			echo "Task $task has not been started"
 			return 1
 		fi
-		started=$(cat "$startfile")
-		ended=$(date --iso-8601=seconds)
-		echo "$task\t$started\t$ended" >> $logfile
+		local started=$(cat "$startfile")
+		local ended=$(date --iso-8601=seconds)
+		echo "$task\t$started\t$ended" >> "$logfile"
 		rm "$startfile"
+		return 0
+	fi
+
+	if [[ $cmd == "hours" ]]; then
+		local lines=("${(@f)$(grep "^$task" < "$logfile" | cut -f2,3)}")
+		local sum=0
+		for line in $lines; do
+			local t0=$(echo "$line" | cut -f1)
+			local t1=$(echo "$line" | cut -f2)
+			diff=$(datediff "$t0" "$t1")
+			sum=$((sum + diff))
+		done
+		echo "$(($sum / 3600.0))"
 		return 0
 	fi
 
