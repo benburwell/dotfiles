@@ -1,6 +1,14 @@
+local function dateimpl() {
+	if [[ $(uname) == "Darwin" ]]; then
+		echo "gdate"
+	else
+		echo "date"
+	fi
+}
+
 local function datediff() {
-	local d0=$(date -d"$1" +%s)
-	local d1=$(date -d"$2" +%s)
+	local d0=$($(dateimpl) -d"$1" +%s)
+	local d1=$($(dateimpl) -d"$2" +%s)
 	echo "$(($d1 - $d0))"
 }
 
@@ -29,7 +37,7 @@ function track() {
 			echo "Task $task was already started at $(cat $startfile)"
 			return 1
 		fi
-		date --iso-8601=seconds > "$startfile"
+		$(dateimpl) --iso-8601=seconds > "$startfile"
 		return 0
 	fi
 
@@ -39,7 +47,7 @@ function track() {
 			return 1
 		fi
 		local started=$(cat "$startfile")
-		local ended=$(date --iso-8601=seconds)
+		local ended=$($(dateimpl) --iso-8601=seconds)
 		echo "$task\t$started\t$ended" >> "$logfile"
 		rm "$startfile"
 		return 0
