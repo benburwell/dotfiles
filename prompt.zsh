@@ -66,10 +66,15 @@ prompt_status() {
 	[[ $(jobs -l | wc -l) -gt 0 ]] && prompt_segment yellow "[bg]"
 }
 
+prompt_user_host() {
+	prompt_segment magenta "%n@%m"
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
+  prompt_user_host
   prompt_dir
   prompt_git
   prompt_end
