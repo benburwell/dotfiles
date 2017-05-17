@@ -129,6 +129,17 @@ nmap <Space> zz
 " always do a global tag search
 nmap <C-]> g<C-]>
 
+" easier navigation
+"
+" this is hacky but some terminals send <BS> instead of <C-h> when ctrl-h is
+" pressed. since i don't really use <BS> in normal mode, this seems like a
+" reasonable thing for it to do.
+nmap <BS> <C-w>h
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-q> <C-w>q
 " quickly regenerate ctags
 if os == "FreeBSD"
 	command Ctags !exctags .
