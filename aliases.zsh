@@ -44,21 +44,21 @@ alias gsp='git stash pop'
 alias gss='git stash save'
 
 # golang
-alias oi="go install"
-alias ob="go build"
-alias gg="go get"
-alias of="go fmt"
+alias goi="go install"
+alias gob="go build"
+alias gog="go get"
+alias gof="go fmt"
 
 # sf
 alias sfc="sf compile"
-alias st="sf test"
-alias sct="sf compileAndTest"
-alias sr="sf retrieve"
-alias sx="sf execute"
-alias sq="sf query"
-alias sap="sf aura push"
-alias sal="sf aura pull"
-alias stt="sf toolingTest"
+alias sft="sf test"
+alias sfct="sf compileAndTest"
+alias sfr="sf retrieve"
+alias sfx="sf execute"
+alias sfq="sf query"
+alias sfap="sf aura push"
+alias sfal="sf aura pull"
+alias sftt="sf toolingTest"
 
 # heroku
 alias h="heroku"
@@ -66,7 +66,6 @@ alias hpg="heroku pg:psql"
 alias hps="heroku ps"
 alias hpss="heroku ps:scale"
 alias hlt="heroku logs --tail"
-alias hu="git push heroku master"
 
 # party parrot
 alias parrot="terminal-parrot"
