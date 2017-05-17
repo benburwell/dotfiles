@@ -26,7 +26,7 @@ fi
 alias g="git"
 alias gl='git pull'
 alias glr='git pull --rebase'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset' --abbrev-commit"
 alias gp='git push'
 alias gd='git diff'
 alias ga='git add'
