@@ -1,9 +1,12 @@
+""" GENERAL SETUP
+
+" let's just get this right out of the way, we're gonna be...
 set nocompatible
 
 " get the current os for later use
 let os = substitute(system('uname'), "\n", "", "")
 
-" UI settings
+""" UI SETTINGS
 syntax enable
 set relativenumber
 set number
@@ -15,7 +18,7 @@ endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
 
-" General file settings
+""" GENERAL FILE SETTINGS
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
@@ -35,6 +38,7 @@ set path+=**
 set wildmenu
 set wildmode=longest,list,full
 
+""" VUNDLE PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
@@ -54,18 +58,19 @@ Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 filetype plugin indent on
 
+""" COLOR SCHEME
 colorscheme gotham
+
+""" FILETYPE-SPECIFIC ADDITIONAL CONFIGURATION
 
 " config files that get specific types/syntax
 au BufEnter ~/.sf/config set ft=json
 
-" various syntaxes from plugins
-"au BufEnter *.coffee set ft=coffee
-"au BufEnter *.jq set ft=jq
-
 " spellcheck markdown files
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
+
+""" PLUGIN OPTIONS
 
 " gitgutter settings
 let g:gitgutter_realtime = 0
@@ -106,6 +111,8 @@ let g:tagbar_type_go = {
 	\ 'ctagsargs' : '-sort -silent'
 \ }
 
+""" CUSTOM KEYBINDINGS
+
 " when the auto competion popup is visible, remap so that the
 " tab key executes the competion
 inoremap <expr> <Tab> pumvisible() ? "\<C-Y>" : "\<Tab>"
@@ -140,6 +147,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-q> <C-w>q
+
+""" CUSTOM COMMANDS
+
 " quickly regenerate ctags
 if os == "FreeBSD"
 	command Ctags !exctags .
@@ -147,6 +157,7 @@ else
 	command Ctags !ctags .
 endif
 
+""" SNIPPETS
 nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
 nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
 nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
