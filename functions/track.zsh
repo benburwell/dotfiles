@@ -13,12 +13,10 @@ local function datediff() {
 }
 
 function track() {
-	if [[ $# -lt 2 ]]; then
-		echo "Usage: track <start|stop|hours> <task>" && return 1
+	if [[ $# -lt 1 ]]; then
+		echo "Usage: track <start|stop|hours|archive>" && return 1
 	fi
-
 	local cmd=$1
-	local task=$2
 	local trackdir
 
 	if [[ $TRACK_ROOT ]]; then
@@ -27,8 +25,20 @@ function track() {
 		trackdir=~/.track
 	fi
 	local logfile="$trackdir/log"
-	local taskdir="$trackdir/task/$task"
 	local startfile="$taskdir/started"
+	local archivedir="$trackdir/archive"
+
+	if [[ $cmd == "archive" ]]; then
+		mkdir -p $archivedir
+		mv "$logfile" "$archivedir/$($(dateimpl) --iso-8601=seconds)"
+		return 0
+	fi
+
+	if [[ $# -lt 2 ]]; then
+		echo "Usage: track $cmd <task>" && return 1
+	fi
+	local task=$2
+	local taskdir="$trackdir/task/$task"
 
 	mkdir -p "$taskdir"
 
