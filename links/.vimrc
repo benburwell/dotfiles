@@ -55,6 +55,7 @@ Plugin 'ssh://git@gitserver.trifecta.com/salesforce-vim.git'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'majutsushi/tagbar'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 filetype plugin indent on
 
