@@ -3,8 +3,6 @@
 --exclude=node_modules
 --exclude=bower_components
 
---langmap=java:+.cls
-
 --langdef=typescript
 --langmap=typescript:.ts
 --regex-typescript=/^[ \t]*(export([ \t]+abstract)?)?[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\3/c,classes/

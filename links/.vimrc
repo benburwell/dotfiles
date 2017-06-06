@@ -51,7 +51,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vito-c/jq.vim'
-Plugin 'ssh://git@gitserver.trifecta.com/salesforce-vim.git'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'majutsushi/tagbar'
 Plugin 'leafgarland/typescript-vim'
@@ -63,9 +62,6 @@ filetype plugin indent on
 colorscheme gotham
 
 """ FILETYPE-SPECIFIC ADDITIONAL CONFIGURATION
-
-" config files that get specific types/syntax
-au BufEnter ~/.sf/config set ft=json
 
 " spellcheck markdown files
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81

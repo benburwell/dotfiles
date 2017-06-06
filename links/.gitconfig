@@ -15,8 +15,6 @@
         whitespace = nowarn
 [mergetool]
         keepBackup = false
-[mergetool "metamerge"]
-        cmd = metamerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [difftool]
         prompt = false
 [help]

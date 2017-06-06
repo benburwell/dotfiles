@@ -2,7 +2,7 @@
 [ui]
 # name and email, e.g.
 # username = Jane Doe <jdoe@example.com>
-username = Ben Burwell <ben.burwell@trifecta.com>
+username = Ben Burwell <ben@benburwell.com>
 
 [extensions]
 # uncomment these lines to enable some popular extensions

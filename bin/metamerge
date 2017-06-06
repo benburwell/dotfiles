@@ -1,4 +1,0 @@
-#!/bin/sh
-
-node "$HOME/Code/salesforce-metamerge/cli.js" "$@"
-

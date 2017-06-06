@@ -1,4 +1,0 @@
-#!/bin/sh
-
-UUID=$(uuidgen)
-sf log latest > /tmp/$UUID && slog -d -t -e -w -m -u -v /tmp/$UUID | less
