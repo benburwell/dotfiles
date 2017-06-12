@@ -1,4 +1,4 @@
-# vim: ft=i3:
+# vim: ft=i3 expandtab:
 
 set $mod Mod1
 font pango:Source Code Pro for Powerline 10
@@ -71,8 +71,8 @@ mode "resize" {
     bindsym j resize grow height 5 px or 5 ppt
 
     # enter and escape to return to normal mode
-    bindcode 36 mode "default"
-    bindcode 9 mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+a mode "default"
 }
 
 # special keys
@@ -88,5 +88,5 @@ bindsym $mod+Shift+e exit
 bindsym $mod+Shift+d exec i3lock -n -c 000000
 
 bar {
-	status_command i3status -c ~/.i3status.conf
+    status_command i3status -c ~/.i3status.conf
 }
