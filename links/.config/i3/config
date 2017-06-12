@@ -2,6 +2,7 @@
 
 set $mod Mod1
 font pango:Source Code Pro for Powerline 10
+exec --no-startup-id ~/.dotfiles/bin/randombg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
