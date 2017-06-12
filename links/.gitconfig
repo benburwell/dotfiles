@@ -23,5 +23,3 @@
         default = simple
 [alias]
 	appraise = !~/Code/bin/git-appraise
-[pull]
-	rebase = true
