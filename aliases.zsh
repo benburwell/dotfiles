@@ -71,3 +71,6 @@ alias d="docker"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
 alias dim="docker images"
+
+# virtyx
+alias ebdeploy="eb deploy --timeout 30 --label \"$(git rev-parse --short HEAD)-$(date +%Y-%m-%dT%H:%M:%SZ)\""
