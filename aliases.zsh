@@ -42,6 +42,7 @@ alias gm='git merge'
 alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gss='git stash save'
+alias gf='git fetch'
 
 # golang
 alias goi="go install"
