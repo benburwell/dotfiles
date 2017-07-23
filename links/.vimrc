@@ -55,6 +55,8 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'majutsushi/tagbar'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-surround'
+Plugin 'Shougo/vimproc'
+Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 filetype plugin indent on
 
