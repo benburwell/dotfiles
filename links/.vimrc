@@ -42,21 +42,21 @@ set wildmode=longest,list,full
 set rtp+=~/.vim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/AutoComplPop'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'fatih/vim-go'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Shougo/vimproc'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'chrisbra/csv.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'fatih/vim-go'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vito-c/jq.vim'
 Plugin 'whatyouhide/vim-gotham'
-Plugin 'majutsushi/tagbar'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'Shougo/vimproc'
-Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 filetype plugin indent on
 
