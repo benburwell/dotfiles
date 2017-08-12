@@ -32,6 +32,7 @@ alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gf='git fetch'
 alias gl='git pull'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset' --abbrev-commit"
