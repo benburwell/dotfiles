@@ -1,27 +1,37 @@
 [user]
-        name = Ben Burwell
-        email = ben@benburwell.com
-        signingkey = ben@benburwell.com
+	name = Ben Burwell
+	email = ben@benburwell.com
+	signingkey = ben@benburwell.com
+
 [credential]
-        helper = osxkeychain
+	helper = osxkeychain
+
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
 [core]
 	excludesfile = ~/.gitignore
+
 [apply]
-        whitespace = nowarn
+	whitespace = nowarn
+
 [mergetool]
-        keepBackup = false
+	keepBackup = false
+
 [difftool]
-        prompt = false
+	prompt = false
+
 [help]
-        autocorrect = 1
+	autocorrect = 1
+
 [push]
 	default = current
+
 [pull]
 	default = current
+
 [alias]
 	appraise = !~/Code/bin/git-appraise
