@@ -55,6 +55,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'vito-c/jq.vim'
 Plugin 'whatyouhide/vim-gotham'
 call vundle#end()
