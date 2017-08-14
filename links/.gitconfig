@@ -35,3 +35,6 @@
 
 [alias]
 	appraise = !~/Code/bin/git-appraise
+
+[help]
+	autocorrect = 0
