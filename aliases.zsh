@@ -24,26 +24,26 @@ fi
 
 # git
 alias g="git"
-alias ga='git add'
-alias gb='git branch'
-alias gbs='git-branches'
-alias gc='git commit'
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gcp='git cherry-pick'
-alias gd='git diff'
-alias gds='git diff --staged'
-alias gf='git fetch'
-alias gl='git pull'
+alias ga="git add"
+alias gb="git branch"
+alias gbs="git-branches"
+alias gc="git commit"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gcp="git cherry-pick"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gf="git fetch"
+alias gl="git pull"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset' --abbrev-commit"
-alias glr='git pull --rebase'
-alias gm='git merge'
-alias gp='git push'
-alias gr='git remote'
-alias gs='git status'
-alias gsl='git stash list'
-alias gsp='git stash pop'
-alias gss='git stash save'
+alias glr="git pull --rebase"
+alias gm="git merge"
+alias gp="git push"
+alias gr="git remote"
+alias gs="git status"
+alias gsl="git stash list"
+alias gsp="git stash pop"
+alias gss="git stash save"
 
 # golang
 alias gob="go build"
