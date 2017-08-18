@@ -74,3 +74,6 @@ alias d="docker"
 alias dim="docker images"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
+
+# make
+alias m="make"
