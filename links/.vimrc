@@ -45,6 +45,7 @@ call vundle#begin()
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Shougo/vimproc'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chrisbra/Colorizer'
@@ -55,7 +56,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/AutoComplPop'
+"Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'vim-scripts/loremipsum'
 Plugin 'vito-c/jq.vim'
@@ -83,7 +84,7 @@ let g:gitgutter_max_signs = 3000
 set diffopt+=vertical
 
 " auto complete popup settings
-let g:acp_completeOption = '.,w,b,u,t,kspell'
+"let g:acp_completeOption = '.,w,b,u,t,kspell'
 
 " colorizer options
 let g:colorizer_auto_filetype='css,scss,html,typescript'
