@@ -54,6 +54,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 "Plugin 'vim-scripts/AutoComplPop'
@@ -116,6 +117,10 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
+
+" prettier settings
+let g:prettier#config#semi = 'false'
+let g:prettier#config#trailing_comma = 'all'
 
 """ CUSTOM KEYBINDINGS
 
