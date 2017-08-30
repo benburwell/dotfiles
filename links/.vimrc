@@ -47,6 +47,7 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'Shougo/vimproc'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'chrisbra/Colorizer'
 Plugin 'chrisbra/csv.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
@@ -82,6 +83,9 @@ set diffopt+=vertical
 
 " auto complete popup settings
 let g:acp_completeOption = '.,w,b,u,t,kspell'
+
+" colorizer options
+let g:colorizer_auto_filetype='css,scss,html,typescript'
 
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
