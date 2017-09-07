@@ -53,7 +53,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue '%1d'
+  prompt_segment blue '%~'
 }
 
 # Status:
@@ -81,5 +81,5 @@ build_prompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt)
-; '
+%F{8}$%F{reset} '
 
