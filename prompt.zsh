@@ -70,11 +70,16 @@ prompt_user_host() {
 	prompt_segment magenta "%n@%m"
 }
 
+prompt_ssh() {
+	[[ $SSH_CONNECTION ]] && prompt_segment red "(SSH)"
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_user_host
+  prompt_ssh
   prompt_dir
   prompt_git
   prompt_end
