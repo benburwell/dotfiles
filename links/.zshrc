@@ -3,9 +3,7 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
+# Load any machine-specific config and environment variables
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
@@ -34,3 +32,5 @@ source $ZSH/completion.zsh
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# prevent a `1` exit code showing up as the most recent thing in the initial prompt
+true
