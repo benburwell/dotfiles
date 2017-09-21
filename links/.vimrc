@@ -49,6 +49,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chrisbra/Colorizer'
+Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'chrisbra/csv.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
@@ -57,7 +58,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-"Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'vim-scripts/loremipsum'
 Plugin 'vito-c/jq.vim'
@@ -73,6 +73,7 @@ colorscheme gotham
 " spellcheck markdown files
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
+au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
 
 """ PLUGIN OPTIONS
 
@@ -172,3 +173,6 @@ endif
 nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
 nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
 nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
+
+command GoogleJavaFormat w | !java -jar ~/.bin/google-java-format-1.4-all-deps.jar --replace %:p
+
