@@ -16,7 +16,9 @@ set index_format = '%C %S %Z %D %-15.15L %s'
 set editor = "nvim +':set textwidth=80' +':set wrap' +':set ft=markdown'"
 
 # remote server
-set mail_check = 60
+set check_new = yes
+set mail_check = 30
+set timeout = 30
 set smtp_authenticators = 'gssapi:login'
 
 # keys
