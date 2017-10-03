@@ -29,7 +29,7 @@ bind index G last-entry
 macro index s '<sync-mailbox>'
 macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/bburwell1@gmail.com<enter><change-folder>!<enter>'
 macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/ben@benburwell.com<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/accounts/bburwell@virtyx.com<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/accounts/bburwell@virtyx.com<enter><change-folder>!<enter>'
 
 # default account
 source ~/.mutt/accounts/bburwell1@gmail.com
