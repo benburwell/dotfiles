@@ -12,7 +12,7 @@ source ~/.mutt/aliases
 
 # formatting
 set date_format = '%Y-%m-%d %H:%M'
-set index_format = '%S %Z %D %-15.15L %s'
+set index_format = '%C %S %Z %D %-15.15L %s'
 set editor = "nvim +':set textwidth=80' +':set wrap' +':set ft=markdown'"
 
 # remote server
