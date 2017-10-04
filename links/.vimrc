@@ -139,6 +139,10 @@ let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_typescript = ['prettier']
 
+" netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
 """ CUSTOM KEYBINDINGS
 
 " when the auto competion popup is visible, remap so that the
