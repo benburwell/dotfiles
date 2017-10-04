@@ -54,6 +54,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'chrisbra/csv.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
+Plugin 'junegunn/fzf'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'prettier/vim-prettier'
@@ -148,6 +149,9 @@ nmap <Space> zz
 
 " always do a global tag search
 nmap <C-]> g<C-]>
+
+" open FZF with Ctrl-P
+nmap <C-p> :FZF<CR>
 
 " easier navigation
 "
