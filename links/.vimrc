@@ -57,7 +57,7 @@ Plugin 'fatih/vim-go'
 Plugin 'junegunn/fzf'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'prettier/vim-prettier'
+Plugin 'sbdchd/neoformat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/argtextobj.vim'
@@ -76,6 +76,12 @@ colorscheme gotham
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
 au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
+
+" autoformat on save
+augroup fmt
+	autocmd!
+	autocmd BufWritePre * :undojoin | Neoformat
+augroup END
 
 """ PLUGIN OPTIONS
 
@@ -121,9 +127,17 @@ let g:tagbar_type_go = {
 	\ 'ctagsargs' : '-sort -silent'
 \ }
 
-" prettier settings
-let g:prettier#config#semi = 'false'
-let g:prettier#config#trailing_comma = 'all'
+
+" google java formatter for neoformat
+let g:neoformat_java_google = {
+	\ 'exe': 'java',
+	\ 'args': ['-jar ~/.bin/google-java-format-1.4-all-deps.jar -'],
+	\ 'stdin': 1,
+	\ }
+let g:neoformat_enabled_java = ['google']
+let g:neoformat_enabled_javascript = ['prettier']
+let g:neoformat_enabled_typescript = ['prettier']
+let g:neoformat_enabled_typescript = ['prettier']
 
 """ CUSTOM KEYBINDINGS
 
@@ -178,6 +192,3 @@ endif
 nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
 nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
 nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
-
-command GoogleJavaFormat w | !java -jar ~/.bin/google-java-format-1.4-all-deps.jar --replace %:p
-
