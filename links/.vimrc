@@ -40,32 +40,30 @@ set wildmenu
 set wildmode=longest,list,full
 
 """ VUNDLE PLUGINS
-set rtp+=~/.vim/bundle/Vundle.vim
-filetype off
-call vundle#begin()
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'chrisbra/Colorizer'
-Plugin 'artur-shaik/vim-javacomplete2'
-Plugin 'chrisbra/csv.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'fatih/vim-go'
-Plugin 'junegunn/fzf'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'sbdchd/neoformat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/argtextobj.vim'
-Plugin 'vim-scripts/loremipsum'
-Plugin 'vito-c/jq.vim'
-Plugin 'whatyouhide/vim-gotham'
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.local/share/nvim/plugged')
+"Plug 'elixir-lang/vim-elixir'
+"Plug 'slashmili/alchemist.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
+Plug 'Shougo/vimproc', {'do' : 'make'}
+Plug 'Valloric/YouCompleteMe', {'do' : './install.py'}
+Plug 'airblade/vim-gitgutter'
+Plug 'artur-shaik/vim-javacomplete2', {'for' : 'java'}
+"Plug 'chauncey-garrett/vim-colorizer'
+Plug 'chrisbra/csv.vim', {'for' : 'csv'}
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', {'for' : 'go'}
+Plug 'junegunn/fzf'
+Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
+Plug 'majutsushi/tagbar'
+Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'vim-scripts/loremipsum'
+Plug 'vito-c/jq.vim', {'for' : 'jq'}
+Plug 'whatyouhide/vim-gotham'
+call plug#end()
 
 """ COLOR SCHEME
 colorscheme gotham
@@ -126,7 +124,6 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
-
 
 " google java formatter for neoformat
 let g:neoformat_java_google = {
