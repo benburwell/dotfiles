@@ -17,6 +17,7 @@ if has("termguicolors")
 endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
+set scrolloff=3
 
 """ GENERAL FILE SETTINGS
 set encoding=utf-8
