@@ -41,6 +41,8 @@ set wildignorecase
 set path+=**
 set wildmenu
 set wildmode=longest,list,full
+set foldmethod=syntax
+set foldlevelstart=1
 "}}}
 
 " Plugins {{{
@@ -80,6 +82,9 @@ colorscheme gotham
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
 au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
+
+" close folds in vimrc by default
+au BufEnter ~/.vimrc set foldmethod=marker foldlevel=0
 
 " autoformat on save
 augroup fmt
