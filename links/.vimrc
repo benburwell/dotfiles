@@ -47,8 +47,6 @@ set foldlevelstart=1
 
 " Plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
-"Plug 'elixir-lang/vim-elixir'
-"Plug 'slashmili/alchemist.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
 Plug 'Shougo/vimproc', {'do' : 'make'}
@@ -58,11 +56,13 @@ Plug 'artur-shaik/vim-javacomplete2', {'for' : 'java'}
 "Plug 'chauncey-garrett/vim-colorizer'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 Plug 'majutsushi/tagbar'
 Plug 'sbdchd/neoformat'
+Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
