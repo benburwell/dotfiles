@@ -33,6 +33,7 @@ source $ZSH/completion.zsh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [ -f ~/.vim/bundle/fzf/shell/completion.zsh ] && source ~/.vim/bundle/fzf/shell/completion.zsh 2> /dev/null
 [ -f ~/.vim/bundle/fzf/shell/key-bindings.zsh ] && source ~/.vim/bundle/fzf/shell/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # prevent a `1` exit code showing up as the most recent thing in the initial prompt
 true
