@@ -65,6 +65,7 @@ Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'types
 Plug 'sbdchd/neoformat'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'vim-scripts/loremipsum'
