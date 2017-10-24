@@ -1,4 +1,4 @@
-""" GENERAL SETUP
+" General Setup {{{
 
 " let's just get this right out of the way, we're gonna be...
 set nocompatible
@@ -6,7 +6,9 @@ set nocompatible
 " get the current os for later use
 let os = substitute(system('uname'), "\n", "", "")
 
-""" UI SETTINGS
+"}}}
+
+" UI Settings {{{
 syntax enable
 set relativenumber
 set number
@@ -18,8 +20,9 @@ endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
 set scrolloff=3
+"}}}
 
-""" GENERAL FILE SETTINGS
+" General file settings {{{
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
@@ -38,8 +41,9 @@ set wildignorecase
 set path+=**
 set wildmenu
 set wildmode=longest,list,full
+"}}}
 
-""" VUNDLE PLUGINS
+" Plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'elixir-lang/vim-elixir'
 "Plug 'slashmili/alchemist.vim'
@@ -64,11 +68,13 @@ Plug 'vim-scripts/loremipsum'
 Plug 'vito-c/jq.vim', {'for' : 'jq'}
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
+"}}}
 
-""" COLOR SCHEME
+" Color scheme {{{
 colorscheme gotham
+"}}}
 
-""" FILETYPE-SPECIFIC ADDITIONAL CONFIGURATION
+" Filetype-specific configuration and autocommands {{{
 
 " spellcheck markdown files
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
@@ -80,23 +86,35 @@ augroup fmt
 	autocmd!
 	autocmd BufWritePre * :undojoin | Neoformat
 augroup END
+"}}}
 
-""" PLUGIN OPTIONS
+" Plugin Options {{{
 
-" gitgutter settings
+" gitgutter settings {{{
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_max_signs = 3000
+"}}}
 
-" fugitive settings
+" fugitive settings {{{
 set diffopt+=vertical
+"}}}
 
-" auto complete popup settings
+" auto complete popup settings {{{
 "let g:acp_completeOption = '.,w,b,u,t,kspell'
+"}}}
 
-" colorizer options
-let g:colorizer_auto_filetype='css,scss,html,typescript'
+" prettier settings {{{
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#semi = 'false'
+"}}}
 
+" colorizer settings {{{
+let g:colorizer_auto_filetype=''
+"}}}
+
+" tagbar settings {{{
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
 	\ 'kinds'     : [
@@ -124,23 +142,34 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
+"}}}
 
-" google java formatter for neoformat
+" neoformat settings {{{
 let g:neoformat_java_google = {
 	\ 'exe': 'java',
 	\ 'args': ['-jar ~/.bin/google-java-format-1.4-all-deps.jar -'],
 	\ 'stdin': 1,
 	\ }
 let g:neoformat_enabled_java = ['google']
-let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_enabled_typescript = ['prettier']
-let g:neoformat_enabled_typescript = ['prettier']
+let g:neoformat_enabled_javascript = []
+let g:neoformat_enabled_typescript = []
+let g:neoformat_enabled_css = ['prettier']
+let g:neoformat_enabled_less = ['prettier']
+let g:neoformat_enabled_sass = ['prettier']
+let g:neoformat_enabled_scss = ['prettier']
+let g:neoformat_enabled_xml = []
+let g:neoformat_enabled_html = []
+let g:neoformat_enabled_xhtml = []
+"}}}
 
-" netrw settings
+" netrw settings {{{
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+"}}}
 
-""" CUSTOM KEYBINDINGS
+"}}}
+
+" Custom keybindings {{{
 
 " when the auto competion popup is visible, remap so that the
 " tab key executes the competion
@@ -179,8 +208,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-q> <C-w>q
+"}}}
 
-""" CUSTOM COMMANDS
+" Custom commands {{{
 
 " quickly regenerate ctags
 if os == "FreeBSD"
@@ -188,8 +218,10 @@ if os == "FreeBSD"
 else
 	command Ctags !ctags .
 endif
+"}}}
 
-""" SNIPPETS
+" Snippets {{{
 nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
 nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
 nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
+"}}}
