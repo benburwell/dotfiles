@@ -19,7 +19,7 @@ if has("termguicolors")
 endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
-set scrolloff=3
+set scrolloff=5
 "}}}
 
 " General file settings {{{
