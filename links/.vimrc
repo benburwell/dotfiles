@@ -52,8 +52,8 @@ Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
 Plug 'Shougo/vimproc', {'do' : 'make'}
 Plug 'Valloric/YouCompleteMe', {'do' : './install.py'}
 Plug 'airblade/vim-gitgutter'
-Plug 'artur-shaik/vim-javacomplete2', {'for' : 'java'}
 "Plug 'chauncey-garrett/vim-colorizer'
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
