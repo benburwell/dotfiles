@@ -61,6 +61,7 @@ Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 Plug 'majutsushi/tagbar'
+Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'typescript']}
 Plug 'sbdchd/neoformat'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
