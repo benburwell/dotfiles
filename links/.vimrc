@@ -80,9 +80,11 @@ colorscheme gotham
 
 " Filetype-specific configuration and autocommands {{{
 
-" spellcheck markdown files
+" spellcheck markdown files and git commit messages
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
+
+" when writing java code, use javacomplete as the omnifunc and set spacing
 au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
 
 " close folds in vimrc by default
