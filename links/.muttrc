@@ -1,35 +1,35 @@
-# sorting
-set sort = "threads"
-set sort_aux = "reverse-last-date-received"
-
-# composing
-set include
-
-# aliases
 set alias_file = ~/.mutt/aliases
-set reverse_alias = yes
-source ~/.mutt/aliases
-
-# formatting
-set date_format = '%Y-%m-%d %H:%M'
-set index_format = '%C %S %Z %D %-15.15L %s'
-set editor = "nvim +':set textwidth=80' +':set wrap' +':set ft=markdown'"
-
-# remote server
-set check_new = yes
-set mail_check = 30
+set beep_new = yes
+set charset = "utf-8"
+set pager_context = 5
+set sort = threads
+set sort_aux = reverse-last-date-received
+set include = yes
+set editor = "nvim +':set textwidth=80' +':set wrap'"
+set mbox_type = Maildir
+set sendmail = /usr/local/Cellar/msmtp/1.6.6/bin/msmtp
+set realname = "Ben Burwell"
+set from = "ben@benburwell.com"
+set use_envelope_from = yes
+set move = no
+set delete = yes
+set mail_check = 5
 set timeout = 30
-set smtp_authenticators = 'gssapi:login'
+unset record
 
-# keys
 bind index gg first-entry
 bind index G last-entry
 
-# macros
-macro index s '<sync-mailbox>'
-macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/bburwell1@gmail.com<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/ben@benburwell.com<enter><change-folder>!<enter>'
-macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/accounts/bburwell@virtyx.com<enter><change-folder>!<enter>'
+mailboxes +INBOX
 
-# default account
-source ~/.mutt/accounts/bburwell1@gmail.com
+# viewing
+ignore *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/benburwell<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/proton<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/virtyx<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/gmail<enter><change-folder>!<enter>'
+
+source ~/.mutt/benburwell
