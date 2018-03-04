@@ -2,7 +2,8 @@
 
 _files -W $GOPATH/src/github.com -/
 _files -W $GOPATH/src/bitbucket.org -/
-_files -W $GOPATH/src/gitserver.trifecta.com -/
+_files -W $GOPATH/src/gitlab.com -/
+_files -W $GOPATH/src/gitlab.burwell.io -/
 _files -W $GOPATH/src/null -/
 
 # See further documentation in `functions/c`.
