@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+monitor () {
+	local pid=$1 i=0
+	while ps $pid &>/dev/null; do
+		if (( i++ > 10 )); then
+			echo "Max checks reached. Sending SIGKILL to $pid..." >&2
+			kill -9 $pid; return 1
+		fi
+		sleep 10
+	done
+	return 0
+}
+
+if [[ $1 -eq "launchd" ]]; then
+	cat <<EOF > ~/Library/LaunchAgents/com.benburwell.mailsync.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.benburwell.mailsync</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Users/ben/.dotfiles/bin/mailsync</string>
+        </array>
+
+        <key>StartInterval</key>
+        <integer>180</integer>
+
+        <key>StandardErrorPath</key>
+        <string>/tmp/offlineimap.err.log</string>
+
+        <key>StandardOutPath</key>
+        <string>/tmp/offlineimap.log</string>
+    </dict>
+</plist>
+EOF
+	launchctl load ~/Library/LaunchAgents/com.benburwell.mailsync.plist
+	exit 0
+fi
+
+echo "STARTING $(date)"
+offlineimap -o & monitor $!
+echo "DONE $(date)"
