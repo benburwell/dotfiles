@@ -1,0 +1,6 @@
+#!/bin/sh
+
+wf=/usr/share/dict/words
+total_words=`wc -l $wf | tr -d ' ' | cut -d'/' -f1`
+ln=`python3 -c "import secrets; print(secrets.randbelow($total_words))"`
+tail -n $ln $wf | head -n 1
