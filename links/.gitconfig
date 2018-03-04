@@ -1,40 +1,36 @@
 [user]
 	name = Ben Burwell
 	email = ben@benburwell.com
-	signingkey = ben@benburwell.com
-
+	signingkey = 666112D967A36ECD
 [credential]
 	helper = osxkeychain
-
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	ui = true
-
 [core]
 	excludesfile = ~/.gitignore
-
 [apply]
 	whitespace = nowarn
-
 [mergetool]
 	keepBackup = false
-
 [difftool]
 	prompt = false
-
 [help]
 	autocorrect = 1
-
 [push]
 	default = current
-
 [pull]
 	default = current
-
 [alias]
 	appraise = !~/Code/bin/git-appraise
-
 [help]
 	autocorrect = 0
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
