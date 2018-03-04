@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+aws ec2 describe-instances | jq --raw-output 'include "aws"; getInstanceMetadata' | column -t -s $'\t' | sort

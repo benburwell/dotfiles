@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 local function dateimpl() {
 	if [[ $(uname) == "Darwin" ]]; then
 		echo "gdate"
@@ -79,3 +81,5 @@ function track() {
 	echo "Unrecognized command $cmd"
 	return 1
 }
+
+track $@

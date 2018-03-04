@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# GitHub Request Pull
+#
+# Assuming the current git repo's `origin` is on GitHub, open the pull request
+# editor for the current branch.
+#
+upstream=$(git config --get remote.origin.url | cut -d':' -f2 | sed 's/\.git$//')
+branch=$(git rev-parse --abbrev-ref HEAD)
+url=https://github.com/$upstream/compare/$branch?expand=1
+open -a "$BROWSER" "$url"

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 function has_push_access() {
 	local http_status=$(curl -s -i -u benburwell:$GITHUB_TOKEN https://api.github.com/repos/$1/$2/collaborators | grep -i status)
 	if [[ $(echo "$http_status" | grep -i forbidden) ]]; then
@@ -27,3 +29,5 @@ function ghclone() {
 	git clone "$url" "$target_dir/$repo"
 	cd "$target_dir/$repo"
 }
+
+ghclone $@

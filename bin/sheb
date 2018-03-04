@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 function sheb() {
 	if [[ $# == "0" ]]; then
 		echo "Usage: sheb <internal ip>"
@@ -17,3 +19,5 @@ function sheb() {
 		ssh -J virtyx -t "ec2-user@$1" "sudo su -"
 	fi
 }
+
+sheb $@
