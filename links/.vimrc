@@ -230,9 +230,3 @@ else
 	command Ctags !ctags .
 endif
 "}}}
-
-" Snippets {{{
-nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
-nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
-nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
-"}}}
