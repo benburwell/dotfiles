@@ -85,3 +85,5 @@ alias pc="pass --clip"
 alias pgp="pass git push"
 alias pgl="pass git pull"
 alias poc="pass otp --clip"
+
+alias tatb="tmux attach -t ben"
