@@ -80,3 +80,8 @@ alias dpsa="docker ps -a"
 # make
 alias m="make"
 
+alias p="pass"
+alias pc="pass --clip"
+alias pgp="pass git push"
+alias pgl="pass git pull"
+alias poc="pass otp --clip"
