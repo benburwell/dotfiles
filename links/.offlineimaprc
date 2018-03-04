@@ -1,0 +1,73 @@
+# vim: ft=cfg:
+
+[general]
+ui = ttyui
+accounts = Gmail, Proton, BenBurwell, Virtyx
+pythonfile = ~/.offlineimap.py
+
+[Account Gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/Mail/Gmail
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser = bburwell1@gmail.com
+remotepasseval = get_pass('bburwell1@gmail.com')
+realdelete = no
+maxconnections = 3
+sslcacertfile = /etc/ssl/cert.pem
+
+[Account Proton]
+localrepository = Proton-Local
+remoterepository = Proton-Remote
+
+[Repository Proton-Local]
+type = Maildir
+localfolders = ~/Mail/Proton
+
+[Repository Proton-Remote]
+type = IMAP
+remotehost = 127.0.0.1
+remoteuser = ben.burwell@protonmail.com
+remotepasseval = get_pass('ben.burwell@protonmail.com')
+remoteport = 1143
+maxconnections = 3
+ssl = no
+
+[Account BenBurwell]
+localrepository = BenBurwell-Local
+remoterepository = BenBurwell-Remote
+
+[Repository BenBurwell-Local]
+type = Maildir
+localfolders = ~/Mail/BenBurwell
+
+[Repository BenBurwell-Remote]
+type = IMAP
+remotehost = 127.0.0.1
+remoteuser = ben@benburwell.com
+remotepasseval = get_pass('ben@benburwell.com')
+remoteport = 1143
+maxconnections = 3
+ssl = no
+
+[Account Virtyx]
+localrepository = Virtyx-Local
+remoterepository = Virtyx-Remote
+
+[Repository Virtyx-Local]
+type = Maildir
+localfolders = ~/Mail/Virtyx
+
+[Repository Virtyx-Remote]
+type = Gmail
+remoteuser = bburwell@virtyx.com
+remotepasseval = get_pass('bburwell@virtyx.com')
+realdelete = no
+maxconnections = 3
+sslcacertfile = /etc/ssl/cert.pem
+

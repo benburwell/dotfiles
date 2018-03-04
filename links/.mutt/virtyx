@@ -1,0 +1,11 @@
+set folder = "~/Mail/Virtyx
+set from = bburwell@virtyx.com"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail].Drafts"
+set record = "+[Gmail].Sent Mail"
+set sendmail = "/usr/local/Cellar/msmtp/1.6.6/bin/msmtp --account=virtyx"
+
+alternates "ben@virtyx.com"
+
+# vim: ft=muttrc
+

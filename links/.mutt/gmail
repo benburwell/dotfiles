@@ -1,0 +1,8 @@
+set folder = "~/Mail/Gmail"
+set from = "bburwell1@gmail.com"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail].Drafts"
+set record = "+[Gmail].Sent Mail"
+set sendmail = "/usr/local/Cellar/msmtp/1.6.6/bin/msmtp --account=gmail"
+
+# vim: ft=muttrc

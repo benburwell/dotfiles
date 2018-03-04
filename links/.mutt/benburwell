@@ -1,0 +1,9 @@
+set folder = "~/Mail/BenBurwell"
+set from = "ben@benburwell.com"
+alternates "benburwell.com$"
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+set record = "+Sent"
+set sendmail = "/usr/local/Cellar/msmtp/1.6.6/bin/msmtp --account=benburwell"
+
+# vim: ft=muttrc
