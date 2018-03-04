@@ -31,7 +31,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 
 set incsearch
 set hlsearch
@@ -42,7 +42,8 @@ set path+=**
 set wildmenu
 set wildmode=longest,list,full
 set foldmethod=syntax
-set foldlevelstart=1
+set foldlevelstart=9999
+set iskeyword-=_
 "}}}
 
 " Plugins {{{
@@ -52,7 +53,6 @@ Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
 Plug 'Shougo/vimproc', {'do' : 'make'}
 Plug 'Valloric/YouCompleteMe', {'do' : './install.py'}
 Plug 'airblade/vim-gitgutter'
-"Plug 'chauncey-garrett/vim-colorizer'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
 Plug 'editorconfig/editorconfig-vim'
@@ -61,7 +61,8 @@ Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 Plug 'majutsushi/tagbar'
-Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'typescript']}
+Plug 'mtth/scratch.vim'
+Plug 'prettier/vim-prettier', {'do': 'npm install'}
 Plug 'sbdchd/neoformat'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
@@ -86,6 +87,7 @@ au FileType gitcommit set spell
 
 " when writing java code, use javacomplete as the omnifunc and set spacing
 au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
+au FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
 " close folds in vimrc by default
 au BufEnter ~/.vimrc set foldmethod=marker foldlevel=0
