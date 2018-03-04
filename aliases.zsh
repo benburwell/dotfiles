@@ -80,4 +80,3 @@ alias dpsa="docker ps -a"
 # make
 alias m="make"
 
-alias efzf="e \$(fzf --preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (rougify {} || cat {}) 2> /dev/null | head -500')"
