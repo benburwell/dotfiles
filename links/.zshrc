@@ -27,13 +27,15 @@ compinit
 source $ZSH/completion.zsh
 
 # external scripts
-[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[ -f ~/.vim/bundle/fzf/shell/completion.zsh ] && source ~/.vim/bundle/fzf/shell/completion.zsh 2> /dev/null
-[ -f ~/.vim/bundle/fzf/shell/key-bindings.zsh ] && source ~/.vim/bundle/fzf/shell/key-bindings.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
+[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
+[ -f "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh"
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+[ -f "$HOME/.vim/bundle/fzf/shell/completion.zsh" ] && source "$HOME/.vim/bundle/fzf/shell/completion.zsh"
+[ -f "$HOME/.vim/bundle/fzf/shell/key-bindings.zsh" ] && source "$HOME/.vim/bundle/fzf/shell/key-bindings.zsh"
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -f "$HOME/Applications/google-cloud-sdk/path.zsh.inc" ] && source "$HOME/Applications/google-cloud-sdk/path.zsh.inc"
+[ -f "$HOME/Applications/google-cloud-sdk/completion.zsh.inc" ] && source "$HOME/Applications/google-cloud-sdk/completion.zsh.inc"
 
 # prevent a `1` exit code showing up as the most recent thing in the initial prompt
 true

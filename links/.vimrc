@@ -28,9 +28,9 @@ set fileencoding=utf-8
 set fileformat=unix
 set autoindent
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set incsearch
@@ -70,6 +70,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'vim-scripts/loremipsum'
+Plug 'vim-scripts/rfc-syntax'
 Plug 'vito-c/jq.vim', {'for' : 'jq'}
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
@@ -86,7 +87,7 @@ au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
 au FileType gitcommit set spell
 
 " when writing java code, use javacomplete as the omnifunc and set spacing
-au FileType java setlocal omnifunc=javacomplete#Complete expandtab shiftwidth=2
+au FileType java setlocal omnifunc=javacomplete#Complete
 au FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
 " close folds in vimrc by default
@@ -118,7 +119,6 @@ set diffopt+=vertical
 " prettier settings {{{
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
-let g:prettier#config#semi = 'false'
 "}}}
 
 " colorizer settings {{{
@@ -161,9 +161,14 @@ let g:neoformat_java_google = {
 	\ 'args': ['-jar ~/.bin/google-java-format-1.4-all-deps.jar -'],
 	\ 'stdin': 1,
 	\ }
+let g:neoformat_html_htmlbeautify = {
+    \ 'exe': 'html-beautify',
+    \ 'args': ['--indent-size', '2', '--indent-inner-html', '--wrap-line-length', '60', '--wrap-attributes', 'force-aligned'],
+    \ 'stdin': 1,
+    \ }
 let g:neoformat_enabled_java = ['google']
-let g:neoformat_enabled_javascript = []
-let g:neoformat_enabled_typescript = []
+let g:neoformat_enabled_javascript = ['prettier']
+let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_less = ['prettier']
 let g:neoformat_enabled_sass = ['prettier']
@@ -208,6 +213,10 @@ nmap <C-]> g<C-]>
 " open FZF with Ctrl-P
 nmap <C-p> :FZF<CR>
 
+" navigate errors with <F5> <F6>
+nmap <F5> :cN<enter>zz
+nmap <F6> :cn<enter>zz
+
 " easier navigation
 "
 " this is hacky but some terminals send <BS> instead of <C-h> when ctrl-h is
@@ -231,8 +240,3 @@ else
 endif
 "}}}
 
-" Snippets {{{
-nnoremap <leader>html :-1read ~/.dotfiles/snippets/doc.html<CR>4j3wli
-nnoremap <leader>cls :-1read ~/.dotfiles/snippets/apexclass.cls<CR>wwhi
-nnoremap <leader>atst :-1read ~/.dotfiles/snippets/apextest.cls<CR>jwwhi
-"}}}

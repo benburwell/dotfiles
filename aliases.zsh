@@ -80,10 +80,18 @@ alias dpsa="docker ps -a"
 # make
 alias m="make"
 
+# pass
 alias p="pass"
 alias pc="pass --clip"
 alias pgp="pass git push"
 alias pgl="pass git pull"
 alias poc="pass otp --clip"
 
+# tmux
 alias tatb="tmux attach -t ben"
+
+# slack
+alias slack="slack-term -config ~/.slack-term.json"
+
+# kubernetes
+alias k="kubectl"

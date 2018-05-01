@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+station=$1
+curl -s "https://avwx.rest/api/metar/$1" | jq --raw-output '.["Raw-Report"]'
+
