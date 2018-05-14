@@ -160,9 +160,9 @@ let g:neoformat_java_google = {
 	\ 'args': ['-jar ~/.bin/google-java-format-1.4-all-deps.jar -'],
 	\ 'stdin': 1,
 	\ }
-let g:neoformat_html_htmlbeautify = {
-    \ 'exe': 'html-beautify',
-    \ 'args': ['--indent-size', '2', '--indent-inner-html', '--wrap-line-length', '60', '--wrap-attributes', 'force-aligned'],
+let g:neoformat_html_beautify = {
+    \ 'exe': 'js-beautify',
+    \ 'args': ['--html', '--editorconfig'],
     \ 'stdin': 1,
     \ }
 let g:neoformat_enabled_java = ['google']
@@ -173,7 +173,7 @@ let g:neoformat_enabled_less = ['prettier']
 let g:neoformat_enabled_sass = ['prettier']
 let g:neoformat_enabled_scss = ['prettier']
 let g:neoformat_enabled_xml = []
-let g:neoformat_enabled_html = []
+let g:neoformat_enabled_html = ['beautify']
 let g:neoformat_enabled_xhtml = []
 "}}}
 
