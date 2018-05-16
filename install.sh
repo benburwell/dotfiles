@@ -20,14 +20,8 @@ done
 cd $HOME
 
 # initialize vundle
-mkdir -p $HOME/.vim/bundle
-if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
-	echo "===> Getting Vundle"
-	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-else
-	echo "---> Looks like we already have Vundle, skipping"
-fi
-vim +PluginInstall +qall
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
 
 # setup nvim
 mkdir -p $HOME/.config
