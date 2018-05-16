@@ -1,7 +1,7 @@
 # vim: set ft=zsh:
 
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+export ZSH=$HOME/code/src/github.com/benburwell/dotfiles
 
 # Load any machine-specific config and environment variables
 if [[ -a ~/.localrc ]]; then
@@ -15,11 +15,11 @@ source $ZSH/window.zsh
 source $ZSH/aliases.zsh
 source $ZSH/config.zsh
 
-for f in $(find ~/.dotfiles/functions/ -type f); do
+for f in $(find $ZSH/functions/ -type f); do
 	source $f
 done
 
-fpath=(~/.dotfiles/bin ~/.dotfiles/functions $fpath)
+fpath=($ZSH/bin $ZSH/functions $fpath)
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit

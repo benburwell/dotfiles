@@ -1,13 +1,14 @@
 #!/usr/bin/env zsh
 
-cd $HOME/.dotfiles/links
+DOTFILES="$HOME/code/src/github.com/benburwell/dotfiles"
+cd "$DOTFILES/links"
 # first create necessary directories
 for d in $(find . ! -path . -type d); do
 	mkdir -p $HOME/${d}
 done
 # create symlinks
 for f in $(find . -type f); do
-	src="$HOME/.dotfiles/links/$f"
+	src="$DOTFILES/links/$f"
 	dst="$HOME/$f"
 	if [ ! -f $dst ]; then
 		echo "===> Symlinking $dst"
