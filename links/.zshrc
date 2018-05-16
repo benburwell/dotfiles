@@ -30,6 +30,7 @@ source $ZSH/completion.zsh
 [ -f "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
 [ -f "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh"
+[ -f "/usr/local/opt/nvm/nvm.sh" ] && source "/usr/local/opt/nvm/nvm.sh"
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 [ -f "$HOME/.vim/bundle/fzf/shell/completion.zsh" ] && source "$HOME/.vim/bundle/fzf/shell/completion.zsh"
 [ -f "$HOME/.vim/bundle/fzf/shell/key-bindings.zsh" ] && source "$HOME/.vim/bundle/fzf/shell/key-bindings.zsh"
