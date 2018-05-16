@@ -156,8 +156,8 @@ let g:tagbar_type_go = {
 
 " neoformat settings {{{
 let g:neoformat_java_google = {
-	\ 'exe': 'java',
-	\ 'args': ['-jar ~/.bin/google-java-format-1.4-all-deps.jar -'],
+	\ 'exe': 'google-java-format',
+	\ 'args': ['-'],
 	\ 'stdin': 1,
 	\ }
 let g:neoformat_html_beautify = {
