@@ -22,8 +22,8 @@ function c() {
 	  cd "$GOPATH/src/bitbucket.org/$1"
 	elif [ ! -z "$1" ] && [ -d "$GOPATH/src/gitlab.com/$1" ]; then
 	  cd "$GOPATH/src/gitlab.com/$1"
-	elif [ ! -z "$1" ] && [ -d "$GOPATH/src/gitlab.burwell.io/$1" ]; then
-	  cd "$GOPATH/src/gitlab.burwell.io/$1"
+	elif [ ! -z "$1" ] && [ -d "$GOPATH/src/gitlab.int.burwell.io/$1" ]; then
+	  cd "$GOPATH/src/gitlab.int.burwell.io/$1"
 	elif [ ! -z "$1" ] && [ -d "$GOPATH/src/null/$1" ]; then
 	  cd "$GOPATH/src/null/$1"
 	elif [ ! -z "$1" ] && [ -s "$GOPATH/src/$1" ]; then
