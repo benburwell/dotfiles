@@ -1,4 +1,4 @@
-" General Setup {{{
+" General Setup
 
 " let's just get this right out of the way, we're gonna be...
 set nocompatible
@@ -6,13 +6,10 @@ set nocompatible
 " get the current os for later use
 let os = substitute(system('uname'), "\n", "", "")
 
-"}}}
-
-" UI Settings {{{
+" UI Settings
 syntax enable
 set relativenumber
 set number
-set cursorline
 set nowrap
 if has("termguicolors")
   set termguicolors
@@ -20,9 +17,8 @@ endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
 set scrolloff=5
-"}}}
 
-" General file settings {{{
+" General file settings
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
@@ -44,9 +40,8 @@ set wildmode=longest,list,full
 set foldmethod=syntax
 set foldlevelstart=9999
 set iskeyword-=_
-"}}}
 
-" Plugins {{{
+" Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
@@ -73,13 +68,11 @@ Plug 'vim-scripts/rfc-syntax'
 Plug 'vito-c/jq.vim', {'for' : 'jq'}
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
-"}}}
 
-" Color scheme {{{
+" Color scheme
 colorscheme gotham
-"}}}
 
-" Filetype-specific configuration and autocommands {{{
+" Filetype-specific configuration and autocommands
 
 " spellcheck markdown files and git commit messages
 au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
@@ -89,42 +82,30 @@ au FileType gitcommit set spell
 au FileType java setlocal omnifunc=javacomplete#Complete
 au FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
-" close folds in vimrc by default
-au BufEnter ~/.vimrc set foldmethod=marker foldlevel=0
-
 " autoformat on save
 augroup fmt
 	autocmd!
 	autocmd BufWritePre * :undojoin | Neoformat
 augroup END
-"}}}
 
-" Plugin Options {{{
+" Plugin Options
 
-" gitgutter settings {{{
+" gitgutter settings
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_max_signs = 3000
-"}}}
 
-" fugitive settings {{{
+" fugitive settings
 set diffopt+=vertical
-"}}}
 
-" auto complete popup settings {{{
-"let g:acp_completeOption = '.,w,b,u,t,kspell'
-"}}}
-
-" prettier settings {{{
+" prettier settings
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
-"}}}
 
-" colorizer settings {{{
+" colorizer settings
 let g:colorizer_auto_filetype=''
-"}}}
 
-" tagbar settings {{{
+" tagbar settings
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
 	\ 'kinds'     : [
@@ -152,9 +133,8 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
-"}}}
 
-" neoformat settings {{{
+" neoformat settings
 let g:neoformat_java_google = {
 	\ 'exe': 'google-java-format',
 	\ 'args': ['-'],
@@ -175,20 +155,8 @@ let g:neoformat_enabled_scss = ['prettier']
 let g:neoformat_enabled_xml = []
 let g:neoformat_enabled_html = ['beautify']
 let g:neoformat_enabled_xhtml = []
-"}}}
 
-" netrw settings {{{
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-"}}}
-
-"}}}
-
-" Custom keybindings {{{
-
-" when the auto competion popup is visible, remap so that the
-" tab key executes the competion
-inoremap <expr> <Tab> pumvisible() ? "\<C-Y>" : "\<Tab>"
+" Custom keybindings
 
 " make { insert a closing }
 inoremap {<CR> {<CR>}<Esc>ko
@@ -200,11 +168,11 @@ nnoremap <silent> <Esc><Esc> <Esc>:let @/=""<CR><Esc>
 noremap ; :
 
 " make n / N center the find on the screen
-nmap n nzz
-nmap N Nzz
+"nmap n nzz
+"nmap N Nzz
 
 " quickly jump center with <space>
-nmap <Space> zz
+"nmap <Space> zz
 
 " always do a global tag search
 nmap <C-]> g<C-]>
@@ -227,9 +195,8 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-q> <C-w>q
-"}}}
 
-" Custom commands {{{
+" Custom commands
 
 " quickly regenerate ctags
 if os == "FreeBSD"
@@ -237,5 +204,4 @@ if os == "FreeBSD"
 else
 	command Ctags !ctags .
 endif
-"}}}
 
