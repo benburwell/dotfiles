@@ -55,17 +55,14 @@ Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 Plug 'majutsushi/tagbar'
-Plug 'mtth/scratch.vim'
 Plug 'prettier/vim-prettier', {'do': 'npm install'}
 Plug 'sbdchd/neoformat'
-Plug 'slashmili/alchemist.vim'
+"Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
-Plug 'vim-scripts/loremipsum'
-Plug 'vim-scripts/rfc-syntax'
-Plug 'vito-c/jq.vim', {'for' : 'jq'}
+Plug 'vito-c/jq.vim'
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
@@ -166,16 +163,6 @@ nnoremap <silent> <Esc><Esc> <Esc>:let @/=""<CR><Esc>
 
 " make it easier to type ex commands
 noremap ; :
-
-" make n / N center the find on the screen
-"nmap n nzz
-"nmap N Nzz
-
-" quickly jump center with <space>
-"nmap <Space> zz
-
-" always do a global tag search
-nmap <C-]> g<C-]>
 
 " open FZF with Ctrl-P
 nmap <C-p> :FZF<CR>
