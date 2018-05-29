@@ -158,9 +158,6 @@ let g:neoformat_enabled_xhtml = []
 
 " Custom keybindings
 
-" make { insert a closing }
-inoremap {<CR> {<CR>}<Esc>ko
-
 " double-Esc clears last search
 nnoremap <silent> <Esc><Esc> <Esc>:let @/=""<CR><Esc>
 
