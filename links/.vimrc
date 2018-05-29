@@ -87,6 +87,9 @@ augroup END
 
 " Plugin Options
 
+" youcompleteme settings
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 " gitgutter settings
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
