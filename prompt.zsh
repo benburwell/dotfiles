@@ -81,7 +81,7 @@ build_prompt() {
   prompt_user_host
   prompt_ssh
   prompt_dir
-  prompt_git
+  [[ $NO_GIT_PROMPT ]] || prompt_git
   prompt_end
 }
 
