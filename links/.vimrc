@@ -168,8 +168,8 @@ noremap ; :
 nmap <C-p> :FZF<CR>
 
 " navigate errors with <F5> <F6>
-nmap <F5> :cN<enter>zz
-nmap <F6> :cn<enter>zz
+"nmap <F5> :cN<enter>zz
+"nmap <F6> :cn<enter>zz
 
 " easier navigation
 "
