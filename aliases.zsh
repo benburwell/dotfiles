@@ -48,23 +48,6 @@ alias gsp="git stash pop"
 alias gss="git stash save"
 alias gt="git tag"
 
-# golang
-alias gob="go build"
-alias gof="go fmt"
-alias gog="go get"
-alias goi="go install"
-
-# heroku
-alias h="heroku"
-alias hlt="heroku logs --tail"
-alias hpg="heroku pg:psql"
-alias hps="heroku ps"
-alias hpss="heroku ps:scale"
-
-# party parrot
-alias celebrate="terminal-parrot -delay 50 -loops 3"
-alias parrot="terminal-parrot"
-
 # docker-compose
 alias dc="docker-compose"
 alias dcd="docker-compose down"
@@ -87,9 +70,6 @@ alias pc="pass --clip"
 alias pgp="pass git push"
 alias pgl="pass git pull"
 alias poc="pass otp --clip"
-
-# tmux
-alias tatb="tmux attach -t ben"
 
 # slack
 alias slack="slack-term -config ~/.slack-term.json"
