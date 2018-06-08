@@ -7,6 +7,7 @@ brew cask install gnucash
 brew cask install gpgtools
 brew cask install mactex
 brew cask install mactex
+brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
 brew cask install wireshark
@@ -28,10 +29,10 @@ brew install neovim
 brew install nvm
 brew install oath-toolkit
 brew install pass
-brew install pinentry
 brew install postgresql@9.5
 brew install pwgen
 brew install python3
 brew install ripgrep
 brew install shellcheck
 brew install tmux
+brew install watch
