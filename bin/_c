@@ -1,9 +1,0 @@
-#compdef c
-
-_files -W $GOPATH/src/github.com -/
-_files -W $GOPATH/src/bitbucket.org -/
-_files -W $GOPATH/src/gitlab.com -/
-_files -W $GOPATH/src/gitlab.int.burwell.io -/
-_files -W $GOPATH/src/null -/
-
-# See further documentation in `functions/c`.
