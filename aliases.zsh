@@ -96,3 +96,8 @@ alias slack="slack-term -config ~/.slack-term.json"
 
 # kubernetes
 alias k="kubectl"
+
+# hub
+alias hb="hub browse"
+alias hbp="hub browse -- pulls"
+alias hbc="hub browse --commits"
