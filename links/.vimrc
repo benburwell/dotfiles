@@ -79,6 +79,9 @@ au FileType gitcommit set spell
 au FileType java setlocal omnifunc=javacomplete#Complete
 au FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
+" git-config(1) uses tabs, so we should too
+au FileType gitconfig setlocal noexpandtab
+
 " autoformat on save
 augroup fmt
 	autocmd!
