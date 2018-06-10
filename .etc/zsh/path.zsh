@@ -1,5 +1,5 @@
 export PATH="$PATH:$PROJECTS/bin"
-export PATH="$PATH:$ZSH/bin"
+export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/usr/local/sbin"

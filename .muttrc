@@ -1,4 +1,4 @@
-set alias_file = ~/.mutt/aliases
+set alias_file = ~/.etc/mutt/aliases
 set beep_new = yes
 set charset = "utf-8"
 set pager_context = 5
@@ -27,9 +27,9 @@ ignore *
 unignore from: to: cc: date: subject:
 hdr_order from: to: cc: date: subject:
 
-macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/benburwell<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/proton<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/virtyx<enter><change-folder>!<enter>'
-macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/gmail<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.etc/mutt/benburwell<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.etc/mutt/proton<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.etc/mutt/virtyx<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.etc/mutt/gmail<enter><change-folder>!<enter>'
 
-source ~/.mutt/benburwell
+source ~/.etc/mutt/benburwell
