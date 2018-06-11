@@ -1,15 +1,16 @@
 # vim: ft=i3 expandtab:
 
 set $mod Mod1
-font pango:Source Code Pro for Powerline 10
+font pango:Fira Code 9
 exec --no-startup-id ~/.dotfiles/bin/randombg
+exec --no-startup-id nm-applet
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec ~/.dotfiles/bin/term
-bindsym $mod+g exec ~/.dotfiles/bin/launch-chrome
+bindsym $mod+Return exec urxvt -e tmux
+bindsym $mod+f exec firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -87,6 +88,7 @@ bindsym XF86AudioMute exec amixer -c0 set Master toggle
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+d exec i3lock -n -c 000000
+bindsym $mod+Shift+f fullscreen
 
 bar {
     status_command i3status -c ~/.i3status.conf
