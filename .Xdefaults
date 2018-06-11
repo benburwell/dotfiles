@@ -1,22 +1,27 @@
-URxvt*background: #0a0f14
-URxvt*foreground: #98d1ce
-URxvt*font: xft:Source Code Pro for Powerline:pixelsize=18:style=medium
-URxvt*boldFont: xft:Source Code Pro for Powerline:pixelsize=18:style=bold
+URxvt*font: xft:Fira Code:pixelsize=12:style=medium
+URxvt*boldFont: xft:Fira Code:pixelsize=12:style=bold
 URxvt*loginShell: true
-URxvt*color0: #0a0f14
-URxvt*color1: #c33027
-URxvt*color2: #26a98b
-URxvt*color3: #edb54b
-URxvt*color4: #195465
-URxvt*color5: #4e5165
-URxvt*color6: #33859d
-URxvt*color7: #98d1ce
-URxvt*color8: #10151b
-URxvt*color9: #d26939
-URxvt*color10: #081f2d
-URxvt*color11: #245361
-URxvt*color12: #093748
-URxvt*color13: #888ba5
-URxvt*color14: #599caa
-URxvt*color15: #d3ebe9
+# colors are from the ENCOM theme for iTerm2:
+# https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/Xresources/ENCOM
+URxvt*foreground: #00a595
+URxvt*background: #000000
+URxvt*cursorColor: #bbbbbb
+URxvt*color0: #000000
+URxvt*color1: #9f0000
+URxvt*color2: #008b00
+URxvt*color3: #ffd000
+URxvt*color4: #0081ff
+URxvt*color5: #bc00ca
+URxvt*color6: #008b8b
+URxvt*color7: #bbbbbb
+URxvt*color8: #555555
+URxvt*color9: #ff0000
+URxvt*color10: #00ee00
+URxvt*color11: #ffff00
+URxvt*color12: #0000ff
+URxvt*color13: #ff00ff
+URxvt*color14: #00cdcd
+URxvt*color15: #ffffff
+URxvt*colorBD: #4cf1e1
 URxvt*termName: xterm-256color
+URxvt*saveLines: 0
