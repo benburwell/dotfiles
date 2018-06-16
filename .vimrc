@@ -39,7 +39,6 @@ set wildmenu
 set wildmode=longest,list,full
 set foldmethod=syntax
 set foldlevelstart=9999
-set iskeyword-=_
 
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
@@ -62,6 +61,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
+Plug 'vim-scripts/camelcasemotion'
 Plug 'vito-c/jq.vim'
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
