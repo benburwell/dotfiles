@@ -48,6 +48,7 @@ Plug 'Shougo/vimproc', {'do' : 'make'}
 Plug 'Valloric/YouCompleteMe', {'do' : './install.py'}
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go', {'for' : 'go'}
