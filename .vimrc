@@ -57,6 +57,7 @@ Plug 'majutsushi/tagbar'
 Plug 'prettier/vim-prettier', {'do': 'npm install'}
 Plug 'sbdchd/neoformat'
 "Plug 'slashmili/alchemist.vim'
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -158,6 +159,12 @@ let g:neoformat_enabled_scss = ['prettier']
 let g:neoformat_enabled_xml = []
 let g:neoformat_enabled_html = ['beautify']
 let g:neoformat_enabled_xhtml = []
+
+" vim-go settings
+let g:go_metalinter_autosave = 1
+
+" ultisnips settings
+let g:UltiSnipsExpandTrigger = "<C-x>"
 
 " Custom keybindings
 
