@@ -59,6 +59,7 @@ Plug 'prettier/vim-prettier', {'do': 'npm install'}
 Plug 'sbdchd/neoformat'
 "Plug 'slashmili/alchemist.vim'
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
