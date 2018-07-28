@@ -10,3 +10,4 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export NVM_DIR="$HOME/.nvm"
 export CDPATH=$(find "$PROJECTS/src" -maxdepth 1 -type d -print0 | tr '\0' ':')$HOME
+export SSLKEYLOGFILE="$HOME/.mitmproxy/sslkeylogfile.txt"
