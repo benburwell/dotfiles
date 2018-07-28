@@ -171,7 +171,8 @@ sudo chmod +x /usr/local/bin/ctop
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # hub
-go get -u github.com/github/hub
+mkdir -p ~/code/src/github.com/github
+git clone git@github.com:github/hub.git ~/code/src/github.com/github/hub
 cd ~/code/src/github.com/github/hub || exit
 sudo make install prefix=/usr/local
 
