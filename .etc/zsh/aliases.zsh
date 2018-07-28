@@ -81,3 +81,5 @@ alias k="kubectl"
 alias hb="hub browse"
 alias hbp="hub browse -- pulls"
 alias hbc="hub browse --commits"
+
+alias s3="s3cmd"
