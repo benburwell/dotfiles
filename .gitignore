@@ -6,3 +6,6 @@ tags
 .idea
 *.iml
 Session.vim
+.config/gqrx
+.config/configstore
+.config/wireshark
