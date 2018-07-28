@@ -50,6 +50,8 @@ gpg --import $KEYS/pass.sec.asc
 mkdir -p ~/.ssh
 cp $KEYS/id_rsa ~/.ssh/id_rsa
 cp $KEYS/id_rsa.pub ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa.pub
 ssh-add ~/.ssh/id_rsa
 
 chsh --shell="$(which zsh)"
@@ -140,8 +142,8 @@ curl \
   --fail \
   --output /tmp/ripgrep_0.8.1_amd64.deb \
   https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
-sudo dpkg -i /tmp/ripgrep.deb
-rm -f /tmp/ripgrep.deb
+sudo dpkg -i /tmp/ripgrep_0.8.1_amd64.deb
+rm -f /tmp/ripgrep_0.8.1_amd64.deb
 
 # google-java-format
 sudo curl \
