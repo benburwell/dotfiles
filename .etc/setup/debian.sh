@@ -41,8 +41,7 @@ sudo apt install -y \
   zsh
 
 # SSH and GPG keys
-# TODO: this probably isn't the right path
-KEYS=/mount/usb/keys
+KEYS=/media/ben/FW
 gpg --import $KEYS/ben.pub.asc
 gpg --import $KEYS/ben.sec.asc
 gpg --import $KEYS/pass.pub.asc
