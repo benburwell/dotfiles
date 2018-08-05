@@ -53,6 +53,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 Plug 'majutsushi/tagbar'
 Plug 'prettier/vim-prettier', {'do': 'npm install'}
@@ -63,6 +65,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'vim-scripts/AnsiEsc.vim'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'vito-c/jq.vim'
