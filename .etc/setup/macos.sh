@@ -37,6 +37,7 @@ brew install python3
 brew install ripgrep
 brew install s3cmd
 brew install shellcheck
+brew install sinclairtarget/wst/um
 brew install tmux
 brew install watch
 brew install wrk
