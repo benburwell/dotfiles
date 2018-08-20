@@ -61,6 +61,10 @@ alias dim="docker images"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
 
+# edit
+alias e="nvim"
+alias ee="nvim -u NONE"
+
 # make
 alias m="make"
 
