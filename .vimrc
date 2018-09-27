@@ -61,11 +61,11 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'vito-c/jq.vim'
-Plug 'whatyouhide/vim-gotham'
+Plug 'benburwell/blayu.vim'
 call plug#end()
 
 " Color scheme
-colorscheme gotham
+colorscheme blayu
 
 " Filetype-specific configuration and autocommands
 
