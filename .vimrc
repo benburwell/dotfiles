@@ -8,15 +8,13 @@ let os = substitute(system('uname'), "\n", "", "")
 
 " UI Settings
 syntax enable
-set relativenumber
-set number
 set nowrap
 if has("termguicolors")
   set termguicolors
 endif
 set listchars=tab:›\ ,nbsp:_,trail:·
 set list
-set scrolloff=5
+set scrolloff=3
 
 " General file settings
 set encoding=utf-8
@@ -46,26 +44,20 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'Quramy/tsuquyomi', {'for' : 'typescript'}
 Plug 'Shougo/vimproc', {'do' : 'make'}
 Plug 'Valloric/YouCompleteMe', {'do' : './install.py'}
-Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go', {'for' : 'go'}
 Plug 'junegunn/fzf'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
-Plug 'majutsushi/tagbar'
 Plug 'prettier/vim-prettier', {'do': 'npm install'}
 Plug 'sbdchd/neoformat'
-"Plug 'slashmili/alchemist.vim'
-Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/AnsiEsc.vim'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'vito-c/jq.vim'
@@ -78,7 +70,7 @@ colorscheme gotham
 " Filetype-specific configuration and autocommands
 
 " spellcheck markdown files and git commit messages
-au FileType markdown set spell expandtab wrap tw=80 colorcolumn=81
+au FileType markdown set spell tw=80 colorcolumn=81 nosmartindent
 au FileType gitcommit set spell
 
 " when writing java code, use javacomplete as the omnifunc and set spacing
@@ -87,6 +79,10 @@ au FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
 " git-config(1) uses tabs, so we should too
 au FileType gitconfig setlocal noexpandtab
+
+" crontab must be edited in place, which is not done by default
+" see https://stackoverflow.com/a/21194148
+autocmd FileType crontab setlocal nowritebackup
 
 " autoformat on save
 augroup fmt
@@ -99,11 +95,6 @@ augroup END
 " youcompleteme settings
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-" gitgutter settings
-let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
-let g:gitgutter_max_signs = 3000
-
 " fugitive settings
 set diffopt+=vertical
 
@@ -113,35 +104,6 @@ let g:prettier#exec_cmd_async = 1
 
 " colorizer settings
 let g:colorizer_auto_filetype=''
-
-" tagbar settings
-let g:tagbar_type_go = {
-	\ 'ctagstype' : 'go',
-	\ 'kinds'     : [
-		\ 'p:package',
-		\ 'i:imports:1',
-		\ 'c:constants',
-		\ 'v:variables',
-		\ 't:types',
-		\ 'n:interfaces',
-		\ 'w:fields',
-		\ 'e:embedded',
-		\ 'm:methods',
-		\ 'r:constructor',
-		\ 'f:functions'
-	\ ],
-	\ 'sro' : '.',
-	\ 'kind2scope' : {
-		\ 't' : 'ctype',
-		\ 'n' : 'ntype'
-	\ },
-	\ 'scope2kind' : {
-		\ 'ctype' : 't',
-		\ 'ntype' : 'n'
-	\ },
-	\ 'ctagsbin'  : 'gotags',
-	\ 'ctagsargs' : '-sort -silent'
-\ }
 
 " neoformat settings
 let g:neoformat_java_google = {
@@ -168,9 +130,6 @@ let g:neoformat_enabled_xhtml = []
 " vim-go settings
 let g:go_metalinter_autosave = 1
 
-" ultisnips settings
-let g:UltiSnipsExpandTrigger = "<C-x>"
-
 " Custom keybindings
 
 " double-Esc clears last search
@@ -181,10 +140,6 @@ noremap ; :
 
 " open FZF with Ctrl-P
 nmap <C-p> :FZF<CR>
-
-" navigate errors with <F5> <F6>
-"nmap <F5> :cN<enter>zz
-"nmap <F6> :cn<enter>zz
 
 " easier navigation
 "
@@ -197,8 +152,6 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-q> <C-w>q
-
-" Custom commands
 
 " quickly regenerate ctags
 if os == "FreeBSD"
