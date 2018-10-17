@@ -11,25 +11,34 @@ brew cask install mactex
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
+brew cask install vlc
 brew cask install wireshark
 brew install cmake
 brew install ctags
 brew install ctop
 brew install dep
+brew install elinks
+brew install etcher
+brew install ffmpeg
 brew install fzf
 brew install git
 brew install go
 brew install google-java-format
 brew install gpg2
+brew install htop
 brew install hub
 brew install irssi
 brew install jq
 brew install maven
+brew install mosh
+brew install msmtp
 brew install mutt
 brew install neovim
+brew install newsbeuter
 brew install nmap
 brew install nvm
 brew install oath-toolkit
+brew install offlineimap
 brew install pass
 brew install postgresql@9.5
 brew install pwgen
@@ -41,3 +50,5 @@ brew install sinclairtarget/wst/um
 brew install tmux
 brew install watch
 brew install wrk
+
+brew services start offlineimap
