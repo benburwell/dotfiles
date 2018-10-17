@@ -8,6 +8,7 @@ pythonfile = ~/.offlineimap.py
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
+postsynchook = notmuch new
 
 [Repository Gmail-Local]
 type = Maildir
@@ -24,6 +25,7 @@ sslcacertfile = /etc/ssl/cert.pem
 [Account Proton]
 localrepository = Proton-Local
 remoterepository = Proton-Remote
+postsynchook = notmuch new
 
 [Repository Proton-Local]
 type = Maildir
@@ -41,6 +43,7 @@ ssl = no
 [Account BenBurwell]
 localrepository = BenBurwell-Local
 remoterepository = BenBurwell-Remote
+postsynchook = notmuch new
 
 [Repository BenBurwell-Local]
 type = Maildir
@@ -58,6 +61,7 @@ ssl = no
 [Account Virtyx]
 localrepository = Virtyx-Local
 remoterepository = Virtyx-Remote
+postsynchook = notmuch new
 
 [Repository Virtyx-Local]
 type = Maildir
@@ -65,8 +69,8 @@ localfolders = ~/Mail/Virtyx
 
 [Repository Virtyx-Remote]
 type = Gmail
-remoteuser = bburwell@virtyx.com
-remotepasseval = get_pass('bburwell@virtyx.com')
+remoteuser = ben@virtyx.com
+remotepasseval = get_pass('ben@virtyx.com')
 realdelete = no
 maxconnections = 3
 sslcacertfile = /etc/ssl/cert.pem

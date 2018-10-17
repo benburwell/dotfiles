@@ -7,18 +7,22 @@ set sort_aux = reverse-last-date-received
 set include = yes
 set editor = "nvim +':set textwidth=80' +':set wrap'"
 set mbox_type = Maildir
-set sendmail = /usr/local/Cellar/msmtp/1.6.6/bin/msmtp
+set sendmail = /usr/local/bin/msmtp
 set realname = "Ben Burwell"
-set from = "ben@benburwell.com"
 set use_envelope_from = yes
 set move = no
 set delete = yes
 set mail_check = 5
 set timeout = 30
+set wait_key = no
 unset record
 
 bind index gg first-entry
 bind index G last-entry
+bind pager k previous-line
+bind pager j next-line
+bind pager gg top
+bind pager G bottom
 
 mailboxes +INBOX
 
@@ -26,10 +30,41 @@ mailboxes +INBOX
 ignore *
 unignore from: to: cc: date: subject:
 hdr_order from: to: cc: date: subject:
+auto_view text/html
+alternative_order text/plain text/html
+set pipe_decode = yes
+set pager_stop = yes
 
+# pgp
+set crypt_autosign = no
+set pgp_auto_decode = yes
+set pgp_autoinline = no
+set pgp_check_exit = yes
+
+# various mailboxes
 macro index <f2> '<sync-mailbox><enter-command>source ~/.etc/mutt/benburwell<enter><change-folder>!<enter>'
 macro index <f3> '<sync-mailbox><enter-command>source ~/.etc/mutt/proton<enter><change-folder>!<enter>'
 macro index <f4> '<sync-mailbox><enter-command>source ~/.etc/mutt/virtyx<enter><change-folder>!<enter>'
 macro index <f5> '<sync-mailbox><enter-command>source ~/.etc/mutt/gmail<enter><change-folder>!<enter>'
 
+macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py ~/Mail/temporary/search<enter><change-folder-readonly>+../temporary/search<enter>" "search mail (using notmuch)"
+
+# colors
+color hdrdefault blue          black
+color quoted     blue          black
+color signature  blue          black
+color attachment red           black
+color message    brightred     black
+color error      brightred     black
+color indicator  brightgreen   black
+color status     brightblue    black
+color tree       white         black
+color normal     white         black
+color markers    red           black
+color search     white         black
+color tilde      brightmagenta black
+color index      blue          black ~F
+color index      green         black "~N|~O"
+
+# use first mailbox by default
 source ~/.etc/mutt/benburwell
