@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 station=$(echo -n "$1" | tr "a-z" "A-Z")
-curl -s "https://avwx.rest/api/metar/$station" | jq --raw-output '.["Raw-Report"]'
+json=$(curl -s "https://avwx.rest/api/metar/$station")
+echo "$json" | /usr/local/bin/jq --raw-output '.["Raw-Report"]' 2>&1
 
