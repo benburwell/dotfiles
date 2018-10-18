@@ -21,8 +21,6 @@ bind index gg first-entry
 bind index G last-entry
 bind pager k previous-line
 bind pager j next-line
-bind pager gg top
-bind pager G bottom
 
 mailboxes +INBOX
 
