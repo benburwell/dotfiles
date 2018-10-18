@@ -126,6 +126,7 @@ let g:neoformat_enabled_scss = ['prettier']
 let g:neoformat_enabled_xml = []
 let g:neoformat_enabled_html = ['beautify']
 let g:neoformat_enabled_xhtml = []
+let g:neoformat_enabled_sql = []
 
 " vim-go settings
 let g:go_metalinter_autosave = 1
