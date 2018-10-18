@@ -36,6 +36,15 @@ fzf-open-file-or-dir() {
 }
 zle -N fzf-open-file-or-dir
 
+fzf-cd-to-project() {
+	local cmd="command find ~/code/src -type d -mindepth 2 -maxdepth 3"
+  local out=$(eval $cmd | fzf --exit-0)
+  cd "$out"
+  zle reset-prompt
+}
+zle -N fzf-cd-to-project
+
+
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
@@ -45,3 +54,4 @@ bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 bindkey '^R' history-incremental-search-backward
 bindkey '^P' fzf-open-file-or-dir
+bindkey '^J' fzf-cd-to-project
