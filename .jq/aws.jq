@@ -2,9 +2,9 @@ def gettag(name): .Tags[] | select(.Key == name).Value;
 
 def getInstanceMetadata: .Reservations[].Instances[] |
 	[
-		gettag("Name") // "--",
 		.PrivateIpAddress,
 		.PublicIpAddress // "--",
+		gettag("Name") // "--",
 		.InstanceId,
 		.InstanceType
 	] |
