@@ -9,3 +9,4 @@ Session.vim
 .config/gqrx
 .config/configstore
 .config/wireshark
+.config/nvim/.netrwhist
