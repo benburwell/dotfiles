@@ -1,0 +1,18 @@
+#!/bin/sh
+
+offset=${1:-13}
+
+if [ "$offset" -lt 1 ]; then
+  echo "offset must be greater than zero" >&2
+  exit 1
+elif [ "$offset" -gt 25 ]; then
+  echo "offset must be less than 26" >&2
+  exit 1
+fi
+
+alphabet=aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ
+sub1=$(echo "$alphabet" | cut -c $((offset * 2 + 1))-)
+sub2=$(echo "$alphabet" | cut -c 1-$((offset * 2)))
+sub=$sub1$sub2
+
+tr "$alphabet" "$sub"

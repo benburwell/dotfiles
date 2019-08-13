@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+BUNDLE=com.benburwell.mailsync
+PLIST="$HOME/Library/LaunchAgents/$BUNDLE.plist"
+
+monitor () {
+	local pid=$1 i=0
+	while ps "$pid" &>/dev/null; do
+		if (( i++ > 10 )); then
+			echo "Max checks reached. Sending SIGKILL to $pid..." >&2
+			kill -9 "$pid"; return 1
+		fi
+		sleep 10
+	done
+	return 0
+}
+
+if [[ "$1" == "install" ]]; then
+	SCRIPTPATH="$( cd "$(dirname "$0")" || exit 1; pwd -P )/$(basename "$0")"
+	cat > "$PLIST" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>$BUNDLE</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>$SCRIPTPATH</string>
+        </array>
+
+        <key>StartInterval</key>
+        <integer>180</integer>
+
+        <key>StandardErrorPath</key>
+        <string>/tmp/offlineimap.err.log</string>
+
+        <key>StandardOutPath</key>
+        <string>/tmp/offlineimap.log</string>
+    </dict>
+</plist>
+EOF
+	launchctl load "$PLIST"
+	exit 0
+elif [[ "$1" == "uninstall" ]]; then
+	launchctl unload "$PLIST"
+	rm -f "$PLIST"
+	exit $?
+elif [[ $# -gt 0 ]]; then
+	echo "Unrecognized options, did you mean 'install' or 'uninstall'?"
+	exit 1
+fi
+
+echo "STARTING $(date)"
+offlineimap -o & monitor $!
+echo "DONE $(date)"

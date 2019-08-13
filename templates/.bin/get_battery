@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+remaining=$(acpi --battery | cut -d':' -f2 | cut -d',' -f2 | sed 's/[^0-9]//g')
+state=$(acpi --battery | cut -d':' -f2 | cut -d',' -f1)
+
+if [[ -z "$remaining" ]]; then
+    exit
+fi
+
+fa_lightning="<span font='FontAwesome'>\uf0e7</span>"
+fa_plug="<span font='FontAwesome'>\uf1e6</span>"
+fa_battery="<span font='FontAwesome'>\uf240</span>"
+fa_question="<span font='FontAwesome'>\uf128</span>"
+
+if [[ $(echo "$state" | grep "Discharging") ]]; then
+    echo "$fa_battery $remaining%"
+elif [[ $(echo "$state" | grep "Full") ]]; then
+    echo "$fa_plug"
+elif [[ $(echo "$state" | grep "Unknown") ]]; then
+    echo "$fa_question"
+else
+    echo "$fa_lightning $remaining%"
+fi

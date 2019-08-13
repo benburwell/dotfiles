@@ -1,0 +1,4 @@
+#!/bin/sh
+
+avail=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
+echo "<span font='FontAwesome'></span> $avail"

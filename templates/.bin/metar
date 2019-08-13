@@ -1,0 +1,29 @@
+#!/bin/bash
+
+say=0
+jq="/usr/bin/jq"
+if [[ ! -x "$jq" && -x "/usr/local/bin/jq" ]]; then
+  jq="/usr/local/bin/jq"
+fi
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+  -s|--say)
+    say=1
+    ;;
+  -*)
+    echo "Unknown option flag: $1"
+    exit 1
+    ;;
+  *)
+    station=$(echo -n "$1" | tr "a-z" "A-Z")
+    ;;
+  esac
+  shift
+done
+json=$(curl -s "https://avwx.rest/api/metar/${station:-KBOS}?options=speech")
+if [ $say -gt 0 ]; then
+  echo "$json" | "$jq" --raw-output '.Speech' 2>&1 | say
+else
+  echo "$json" | "$jq" --raw-output '.["Raw-Report"]' 2>&1
+fi

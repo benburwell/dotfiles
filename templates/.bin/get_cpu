@@ -1,0 +1,7 @@
+#!/usr/bin/zsh
+
+idle=$(mpstat -o JSON 1 1 | jq '.sysstat.hosts[0].statistics[0]["cpu-load"][0].idle')
+used=$((100.0 - $idle))
+temp=$(acpi --thermal | cut -d':' -f2 | cut -d',' -f2 | sed 's/[^0-9\.]//g')
+
+printf "<span font='FontAwesome'></span> %d%% %d°C\n" $used $temp

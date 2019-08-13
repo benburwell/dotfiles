@@ -1,0 +1,11 @@
+#!/bin/bash
+
+jq="/usr/bin/jq"
+if [[ ! -x "$jq" && -x "/usr/local/bin/jq" ]]; then
+  jq="/usr/local/bin/jq"
+fi
+
+station=$(echo -n "$1" | tr "a-z" "A-Z")
+json=$(curl -s "https://avwx.rest/api/taf/${station:-KBOS}")
+echo "$json" | "$jq" --raw-output '.["Raw-Report"]' 2>&1
+

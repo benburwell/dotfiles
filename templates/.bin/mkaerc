@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cd ~/c/aerc && make clean all GOFLAGS=-tags=notmuch && sudo make install

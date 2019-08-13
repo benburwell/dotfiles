@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+dmenu_fn=Roboto
+dmenu_nb="#0e2133"
+dmenu_nf="#e6e0cf"
+dmenu_sb="#7390bf"
+dmenu_sf="#0e2133"
+
+menu() {
+  dmenu -fn "$dmenu_fn" -nf "$dmenu_nf" -nb "$dmenu_nb" -sb "$dmenu_sb" -sf "$dmenu_sf" -p "$1"
+}
+
+action=$(echo "lock screen\nreboot\nshutdown" | menu "Action:")
+if [[ "$action" == "lock screen" ]]; then
+  i3lock-fancy -- scrot -z
+elif [[ "$action" == "reboot" ]]; then
+  i3-nagbar -t warning -m "Are you sure you want to reboot?" -B "Reboot" "reboot"
+elif [[ "$action" == "shutdown" ]]; then
+  i3-nagbar -t warning -m "Are you sure you want to shut down?" -B "Shut Down" "sudo shutdown -h now"
+fi

@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+feh --randomize --bg-fill $HOME/.wallpaper/*
