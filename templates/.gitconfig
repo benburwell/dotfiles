@@ -1,0 +1,57 @@
+# Ansible managed
+# vim: ft=gitconfig
+[user]
+	name = Ben Burwell
+	email = ben@benburwell.com
+	signingkey = 666112D967A36ECD
+[credential]
+	helper = osxkeychain
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = false
+	filemode = false
+	precomposeUnicode = true
+[apply]
+	whitespace = nowarn
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[pull]
+	default = simple
+[help]
+	autocorrect = 0
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[gpg]
+	program = gpg
+[sendemail]
+	from = Ben Burwell <ben@benburwell.com>
+	envelopeSender = auto
+	smtpuser =
+	smtpserver = "/usr/local/bin/msmtp"
+	smtpserveroption = "--account=fastmail"
+	smtpencryption = tls
+	chainreplyto = false
+	confirm = auto
+	annotate = yes
+[rebase]
+	autoSquash = true
+[github]
+	user = benburwell
+[ghi]
+	token = !security find-internet-password -a benburwell -s github.com -l 'ghi token' -w

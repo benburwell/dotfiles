@@ -1,0 +1,8 @@
+.DS_Store
+*~
+*.swp
+.agignore
+tags
+.idea
+*.iml
+Session.vim
