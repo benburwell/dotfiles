@@ -1,0 +1,15 @@
+browser links
+auto-reload yes
+notify-beep yes
+pager less
+refresh-on-startup yes
+reload-time 15
+
+bind-key j next
+bind-key k prev
+bind-key J next-unread
+bind-key K prev-unread
+bind-key d delete-article
+bind-key | pipe-to
+bind-key g home
+bind-key G end
