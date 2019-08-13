@@ -1,0 +1,4 @@
+text/html; lynx -dump -width=78 -nolist %s | sed 's/^   //'; copiousoutput; needsterminal; nametemplate=%s.html
+application/pdf; pdftohtml -stdout %s | lynx -dump -width=78 -nolist -stdin | sed 's/^   //'; copiousoutput; needsterminal; nametemplate=%s.pdf
+image/png; convert png:- jpeg:- | jp2a --term-fit - | less
+image/jpeg; jp2a --term-fit - | less
