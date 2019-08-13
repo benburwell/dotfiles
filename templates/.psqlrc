@@ -1,0 +1,3 @@
+\timing on
+\setenv PAGER 'pspg --no-mouse -bX --no-commandbar --no-topbar'
+\set HISTSIZE 100000
