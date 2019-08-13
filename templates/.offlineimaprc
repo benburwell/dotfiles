@@ -1,0 +1,24 @@
+# vim: ft=cfg:
+
+[general]
+ui = ttyui
+accounts = Fastmail
+
+[Account Fastmail]
+localrepository = Fastmail-Local
+remoterepository = Fastmail-Remote
+postsynchook = notmuch new
+
+[Repository Fastmail-Local]
+type = Maildir
+localfolders = ~/Mail/Fastmail
+
+[Repository Fastmail-Remote]
+type = IMAP
+remotehost = imap.fastmail.com
+remoteport = 993
+remoteuser = benburwell@fastmail.com
+remotepasseval = {{ pass "mail/benburwell@fastmail.com" }}
+maxconnections = 3
+sslcacertfile = /etc/ssl/cert.pem
+ssl = yes
