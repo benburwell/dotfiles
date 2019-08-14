@@ -112,10 +112,10 @@ au FileType crontab setlocal nowritebackup
 au FileType mail setlocal spell
 au FileType bindzone setlocal noexpandtab ts=8 sts=8 sw=8
 
-au BufWritePost ~/dotfiles/templates/* call ConfApply(expand('%:p'))
+au BufWritePost $CONF_SOURCE/templates/* call ConfApply(expand('%:p'))
 
 function! ConfApply(name)
-  let l:rel = substitute(a:name, "^".expand("~/dotfiles/templates/"), "", "")
+  let l:rel = substitute(a:name, "^".expand($CONF_SOURCE."/templates/"), "", "")
   silent execute "!conf apply " . l:rel
 endfunction
 
