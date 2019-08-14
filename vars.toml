@@ -21,3 +21,14 @@ Cyan = "0x73b8bf"
 BrightCyan = "0x95dfe6"
 White = "0xe6e0cf"
 BrightWhite = "0xfff9e9"
+
+[ZSH]
+AutoScripts = [
+  "/usr/local/opt/fzf/shell/completion.zsh",
+  "/usr/local/opt/fzf/shell/key-bindings.zsh",
+  "$HOME/.iterm2_shell_integration.zsh",
+  "$HOME/.travis/travis.sh",
+  "$HOME/.rvm/scripts/rvm",
+  "$HOME/Applications/google-cloud-sdk/path.zsh.inc",
+  "$HOME/Applications/google-cloud-sdk/completion.zsh.inc"
+]
