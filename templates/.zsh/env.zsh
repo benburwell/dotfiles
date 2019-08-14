@@ -14,4 +14,3 @@ export CDPATH=$HOME/c:$HOME
 export SSLKEYLOGFILE="$HOME/.mitmproxy/sslkeylogfile.txt"
 export BAT_PAGER="less -rf"
 export CONF_SOURCE="$HOME/dotfiles"
-export CONF_DEST="$HOME"
