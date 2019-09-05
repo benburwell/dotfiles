@@ -23,6 +23,7 @@ set hlsearch
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'chrisbra/csv.vim', {'for' : 'csv'}
 Plug 'chrisbra/Colorizer'
