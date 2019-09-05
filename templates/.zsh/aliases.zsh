@@ -35,7 +35,7 @@ alias dcd="docker-compose down"
 alias dcud="docker-compose up -d"
 
 # edit
-alias e="nvim"
+alias e="vim"
 
 # pass
 alias pc="pass --clip"
